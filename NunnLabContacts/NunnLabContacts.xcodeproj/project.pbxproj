@@ -20,7 +20,7 @@
 		A60EC07D260D5E4700AD10DF /* mapContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC07C260D5E4700AD10DF /* mapContactViewController.swift */; };
 		A60EC085260D5F1200AD10DF /* createContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC084260D5F1200AD10DF /* createContactViewController.swift */; };
 		A60EC08A260D5FB100AD10DF /* detailContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC089260D5FB100AD10DF /* detailContactViewController.swift */; };
-		A60EC08F260D81CA00AD10DF /* Zion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A60EC08E260D81CA00AD10DF /* Zion.jpg */; };
+		BE8225782623F3ED0023ADCA /* updateContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8225772623F3ED0023ADCA /* updateContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,7 @@
 		A60EC07C260D5E4700AD10DF /* mapContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapContactViewController.swift; sourceTree = "<group>"; };
 		A60EC084260D5F1200AD10DF /* createContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createContactViewController.swift; sourceTree = "<group>"; };
 		A60EC089260D5FB100AD10DF /* detailContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailContactViewController.swift; sourceTree = "<group>"; };
-		A60EC08E260D81CA00AD10DF /* Zion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Zion.jpg; path = ../../../Images/Zion.jpg; sourceTree = "<group>"; };
+		BE8225772623F3ED0023ADCA /* updateContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updateContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,12 +115,12 @@
 				A60EC03C260D4B4200AD10DF /* SceneDelegate.swift */,
 				A60EC03E260D4B4200AD10DF /* ViewController.swift */,
 				A60EC040260D4B4200AD10DF /* Main.storyboard */,
+				BE8225772623F3ED0023ADCA /* updateContactViewController.swift */,
 				A60EC089260D5FB100AD10DF /* detailContactViewController.swift */,
 				A60EC084260D5F1200AD10DF /* createContactViewController.swift */,
 				A60EC07C260D5E4700AD10DF /* mapContactViewController.swift */,
 				A60EC072260D590300AD10DF /* individualTableViewCell.swift */,
 				A60EC06D260D585A00AD10DF /* contactsTableViewController.swift */,
-				A60EC08E260D81CA00AD10DF /* Zion.jpg */,
 				A60EC043260D4B4500AD10DF /* Assets.xcassets */,
 				A60EC045260D4B4500AD10DF /* LaunchScreen.storyboard */,
 				A60EC048260D4B4500AD10DF /* Info.plist */,
@@ -252,7 +252,6 @@
 				A60EC047260D4B4500AD10DF /* LaunchScreen.storyboard in Resources */,
 				A60EC044260D4B4500AD10DF /* Assets.xcassets in Resources */,
 				A60EC042260D4B4200AD10DF /* Main.storyboard in Resources */,
-				A60EC08F260D81CA00AD10DF /* Zion.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +283,7 @@
 				A60EC03D260D4B4200AD10DF /* SceneDelegate.swift in Sources */,
 				A60EC07D260D5E4700AD10DF /* mapContactViewController.swift in Sources */,
 				A60EC08A260D5FB100AD10DF /* detailContactViewController.swift in Sources */,
+				BE8225782623F3ED0023ADCA /* updateContactViewController.swift in Sources */,
 				A60EC073260D590300AD10DF /* individualTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

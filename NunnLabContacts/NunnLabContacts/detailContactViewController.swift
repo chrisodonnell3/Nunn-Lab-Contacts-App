@@ -9,12 +9,25 @@
 import UIKit
 
 class detailContactViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    
+    // TODO: Evelyn's work
+    // Connected elements
+    // Need to connect these to the TableViewCell Controller tomorrow
+    @IBOutlet weak var contactPicture: UIImageView!
+    
+    @IBOutlet weak var contactName: UILabel!
+    
+    @IBOutlet weak var contactSex: UILabel!
+    
+    @IBOutlet weak var contactAge: UILabel!
+    
+    @IBOutlet weak var contactLocation: UILabel!
+    
+    // Do any additional setup after loading the view.
+    
+    
+    
+}
     
 
     /*
@@ -26,5 +39,3 @@ class detailContactViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-}
