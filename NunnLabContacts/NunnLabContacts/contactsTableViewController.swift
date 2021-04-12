@@ -6,11 +6,27 @@
 //
 
 import UIKit
+var resultSearchController = UISearchController()
+let tableData = ["One","Two","Three","Twenty-One"]
+var filteredTableData = [String]()
 
 class contactsTableViewController: UITableViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // added some code for the search bar
+//        resultSearchController = ({
+//            let controller = UISearchController(searchResultsController: nil)
+//            controller.searchResultsUpdater = self
+//            controller.obscuresBackgroundDuringPresentation = false
+//            controller.searchBar.sizeToFit()
+//            tableView.tableHeaderView = controller.searchBar
+//            return controller
+//        })()
+//        // Reload the table
+//        tableView.reloadData()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -27,8 +43,12 @@ class contactsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 3
+//        if  (resultSearchController.isActive) {
+//              return 1
+//          } else {
+//              return 3
+//          }
+        return 1
     }
 
     
