@@ -108,15 +108,18 @@ class contactsTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let destVC = segue.destination as! detailContactViewController
-        // let selectRow = tableView.indexPathForSelectedRow?.row
-        
-        // populate items
-        destVC.contact_name = "Name(s): " + "Zion Williamson" // after plus will go data
-        destVC.contact_sex = "Sex: " + "Male" // after plus will go data
-        destVC.picture = zionImage
-        destVC.contact_age = "Age: " + "20" // after plus will go data
-        destVC.contact_location = "Location: " + "Duke" // after plus will go data
+        if (segue.identifier == "contactDetails") {
+            let destVC = segue.destination as! detailContactViewController
+            // let selectRow = tableView.indexPathForSelectedRow?.row
+            
+            // populate items
+            destVC.contact_name = "Name(s): " + "Zion Williamson" // after plus will go data
+            destVC.contact_sex = "Sex: " + "Male" // after plus will go data
+            destVC.picture = zionImage
+            destVC.contact_age = "Age: " + "20" // after plus will go data
+            destVC.contact_location = "Location: " + "Duke" // after plus will go data
+            
+        }
         
         
         

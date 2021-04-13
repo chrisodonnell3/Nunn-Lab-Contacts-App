@@ -94,7 +94,7 @@
                                 <connections>
                                     <outlet property="ContactName" destination="0dt-2g-uK2" id="M6U-5W-gTK"/>
                                     <outlet property="ContactPhoto" destination="88f-e8-vMU" id="TFg-tM-HXL"/>
-                                    <segue destination="nKW-4e-3hX" kind="show" id="dl4-UO-ceU"/>
+                                    <segue destination="nKW-4e-3hX" kind="show" identifier="contactDetails" id="dl4-UO-ceU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
