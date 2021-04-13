@@ -6,11 +6,29 @@
 //
 
 import UIKit
+var resultSearchController = UISearchController()
+let tableData = ["One","Two","Three","Twenty-One"]
+var filteredTableData = [String]()
 
 class contactsTableViewController: UITableViewController {
+    
+    var zionImage : UIImage = UIImage(named:"ProfileTest")!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // added some code for the search bar
+//        resultSearchController = ({
+//            let controller = UISearchController(searchResultsController: nil)
+//            controller.searchResultsUpdater = self
+//            controller.obscuresBackgroundDuringPresentation = false
+//            controller.searchBar.sizeToFit()
+//            tableView.tableHeaderView = controller.searchBar
+//            return controller
+//        })()
+//        // Reload the table
+//        tableView.reloadData()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -27,8 +45,12 @@ class contactsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 3
+//        if  (resultSearchController.isActive) {
+//              return 1
+//          } else {
+//              return 3
+//          }
+        return 1
     }
 
     
@@ -86,10 +108,19 @@ class contactsTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let destVC = segue.destination as! detailContactViewController
-        let selectRow = tableView.indexPathForSelectedRow?.row
+        if (segue.identifier == "contactDetails") {
+            let destVC = segue.destination as! detailContactViewController
+            // let selectRow = tableView.indexPathForSelectedRow?.row
+            
+            // populate items
+            destVC.contact_name = "Name(s): " + "Zion Williamson" // after plus will go data
+            destVC.contact_sex = "Sex: " + "Male" // after plus will go data
+            destVC.picture = zionImage
+            destVC.contact_age = "Age: " + "20" // after plus will go data
+            destVC.contact_location = "Location: " + "Duke" // after plus will go data
+            
+        }
         
-        // assign elements of destVC using index selectRow with each data array
         
         
     }

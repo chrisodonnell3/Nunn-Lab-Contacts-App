@@ -8,11 +8,14 @@
 import UIKit
 
 class individualTableViewCell: UITableViewCell {
+    
 
+    @IBOutlet weak var ContactName: UILabel!
     
     @IBOutlet weak var ContactPhoto: UIImageView!
-    
-    @IBOutlet weak var ContactName: UILabel!
+    //    @IBOutlet weak var ContactPhoto: UIImageView!
+//
+//    @IBOutlet weak var ContactName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
