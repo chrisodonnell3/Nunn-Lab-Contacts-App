@@ -23,7 +23,24 @@ class detailContactViewController: UIViewController {
     
     @IBOutlet weak var contactLocation: UILabel!
     
+    var contact_name: String = ""
+    var contact_sex: String = ""
+    var contact_age : String = ""
+    var contact_location : String = ""
+    var picture: UIImage!
+    
     // Do any additional setup after loading the view.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        contactName.text = contact_name
+        contactSex.text = contact_sex
+        contactAge.text = contact_age
+        contactLocation.text = contact_location
+        contactPicture.image = picture
+
+        // Do any additional setup after loading the view.
+    }
+    
     
     
     

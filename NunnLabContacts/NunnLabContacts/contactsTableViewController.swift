@@ -12,6 +12,8 @@ var filteredTableData = [String]()
 
 class contactsTableViewController: UITableViewController {
     
+    var zionImage : UIImage = UIImage(named:"ProfileTest")!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,9 +109,15 @@ class contactsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let destVC = segue.destination as! detailContactViewController
-        let selectRow = tableView.indexPathForSelectedRow?.row
+        // let selectRow = tableView.indexPathForSelectedRow?.row
         
-        // assign elements of destVC using index selectRow with each data array
+        // populate items
+        destVC.contact_name = "Name(s): " + "Zion Williamson" // after plus will go data
+        destVC.contact_sex = "Sex: " + "Male" // after plus will go data
+        destVC.picture = zionImage
+        destVC.contact_age = "Age: " + "20" // after plus will go data
+        destVC.contact_location = "Location: " + "Duke" // after plus will go data
+        
         
         
     }
