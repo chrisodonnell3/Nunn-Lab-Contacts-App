@@ -6,13 +6,11 @@
 //
 
 import UIKit
-var resultSearchController = UISearchController()
-let tableData = ["One","Two","Three","Twenty-One"]
-var filteredTableData = [String]()
+
 
 class contactsTableViewController: UITableViewController {
     
-    var zionImage : UIImage = UIImage(named:"ProfileTest")!
+    
     
 
     override func viewDidLoad() {
