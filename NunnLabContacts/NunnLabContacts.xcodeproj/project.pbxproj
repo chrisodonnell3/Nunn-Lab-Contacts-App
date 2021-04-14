@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		80684A3A2624151F001FCD58 /* NunnLabContacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80684A382624151F001FCD58 /* NunnLabContacts.xcdatamodeld */; };
 		A60EC03B260D4B4200AD10DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC03A260D4B4200AD10DF /* AppDelegate.swift */; };
 		A60EC03D260D4B4200AD10DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC03C260D4B4200AD10DF /* SceneDelegate.swift */; };
 		A60EC03F260D4B4200AD10DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC03E260D4B4200AD10DF /* ViewController.swift */; };
@@ -21,6 +20,10 @@
 		A60EC07D260D5E4700AD10DF /* mapContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC07C260D5E4700AD10DF /* mapContactViewController.swift */; };
 		A60EC085260D5F1200AD10DF /* createContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC084260D5F1200AD10DF /* createContactViewController.swift */; };
 		A60EC08A260D5FB100AD10DF /* detailContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC089260D5FB100AD10DF /* detailContactViewController.swift */; };
+		A66653312627950300FDF6D3 /* DataModel in Resources */ = {isa = PBXBuildFile; fileRef = A666532F2627950200FDF6D3 /* DataModel */; };
+		A66653322627950300FDF6D3 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A66653302627950200FDF6D3 /* Base.lproj */; };
+		A67723B42624B97300747EEF /* landingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67723B32624B97300747EEF /* landingCollectionViewController.swift */; };
+		A67723C12624BFDF00747EEF /* personCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67723C02624BFDF00747EEF /* personCollectionViewCell.swift */; };
 		BE8225782623F3ED0023ADCA /* updateContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8225772623F3ED0023ADCA /* updateContactViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		80684A392624151F001FCD58 /* NunnLabContacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NunnLabContacts.xcdatamodel; sourceTree = "<group>"; };
 		A60EC037260D4B4200AD10DF /* NunnLabContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NunnLabContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60EC03A260D4B4200AD10DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A60EC03C260D4B4200AD10DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,10 @@
 		A60EC07C260D5E4700AD10DF /* mapContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapContactViewController.swift; sourceTree = "<group>"; };
 		A60EC084260D5F1200AD10DF /* createContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createContactViewController.swift; sourceTree = "<group>"; };
 		A60EC089260D5FB100AD10DF /* detailContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailContactViewController.swift; sourceTree = "<group>"; };
+		A666532F2627950200FDF6D3 /* DataModel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DataModel; sourceTree = "<group>"; };
+		A66653302627950200FDF6D3 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		A67723B32624B97300747EEF /* landingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = landingCollectionViewController.swift; sourceTree = "<group>"; };
+		A67723C02624BFDF00747EEF /* personCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personCollectionViewCell.swift; sourceTree = "<group>"; };
 		BE8225772623F3ED0023ADCA /* updateContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updateContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,16 +123,19 @@
 				A60EC03C260D4B4200AD10DF /* SceneDelegate.swift */,
 				A60EC03E260D4B4200AD10DF /* ViewController.swift */,
 				A60EC040260D4B4200AD10DF /* Main.storyboard */,
+				A67723C02624BFDF00747EEF /* personCollectionViewCell.swift */,
 				BE8225772623F3ED0023ADCA /* updateContactViewController.swift */,
 				A60EC089260D5FB100AD10DF /* detailContactViewController.swift */,
-				80684A382624151F001FCD58 /* NunnLabContacts.xcdatamodeld */,
 				A60EC084260D5F1200AD10DF /* createContactViewController.swift */,
+				A66653302627950200FDF6D3 /* Base.lproj */,
+				A666532F2627950200FDF6D3 /* DataModel */,
 				A60EC07C260D5E4700AD10DF /* mapContactViewController.swift */,
 				A60EC072260D590300AD10DF /* individualTableViewCell.swift */,
 				A60EC06D260D585A00AD10DF /* contactsTableViewController.swift */,
 				A60EC043260D4B4500AD10DF /* Assets.xcassets */,
 				A60EC045260D4B4500AD10DF /* LaunchScreen.storyboard */,
 				A60EC048260D4B4500AD10DF /* Info.plist */,
+				A67723B32624B97300747EEF /* landingCollectionViewController.swift */,
 			);
 			path = NunnLabContacts;
 			sourceTree = "<group>";
@@ -252,7 +261,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A66653312627950300FDF6D3 /* DataModel in Resources */,
 				A60EC047260D4B4500AD10DF /* LaunchScreen.storyboard in Resources */,
+				A66653322627950300FDF6D3 /* Base.lproj in Resources */,
 				A60EC044260D4B4500AD10DF /* Assets.xcassets in Resources */,
 				A60EC042260D4B4200AD10DF /* Main.storyboard in Resources */,
 			);
@@ -282,9 +293,10 @@
 				A60EC03F260D4B4200AD10DF /* ViewController.swift in Sources */,
 				A60EC085260D5F1200AD10DF /* createContactViewController.swift in Sources */,
 				A60EC03B260D4B4200AD10DF /* AppDelegate.swift in Sources */,
+				A67723C12624BFDF00747EEF /* personCollectionViewCell.swift in Sources */,
 				A60EC06E260D585A00AD10DF /* contactsTableViewController.swift in Sources */,
 				A60EC03D260D4B4200AD10DF /* SceneDelegate.swift in Sources */,
-				80684A3A2624151F001FCD58 /* NunnLabContacts.xcdatamodeld in Sources */,
+				A67723B42624B97300747EEF /* landingCollectionViewController.swift in Sources */,
 				A60EC07D260D5E4700AD10DF /* mapContactViewController.swift in Sources */,
 				A60EC08A260D5FB100AD10DF /* detailContactViewController.swift in Sources */,
 				BE8225782623F3ED0023ADCA /* updateContactViewController.swift in Sources */,
@@ -615,19 +627,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		80684A382624151F001FCD58 /* NunnLabContacts.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				80684A392624151F001FCD58 /* NunnLabContacts.xcdatamodel */,
-			);
-			currentVersion = 80684A392624151F001FCD58 /* NunnLabContacts.xcdatamodel */;
-			path = NunnLabContacts.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A60EC02F260D4B4200AD10DF /* Project object */;
 }
