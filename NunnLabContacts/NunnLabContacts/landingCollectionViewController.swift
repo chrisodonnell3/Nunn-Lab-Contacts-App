@@ -15,7 +15,7 @@ var zionImage : UIImage = UIImage(named:"ProfileTest")!
 class landingCollectionViewController: UICollectionViewController {
     
     let contactPhotos: [UIImage] = [UIImage(named: "ProfileTest")!]
-    let contactNames: [String] = ["Zion"]
+    let contactNames: [String] = ["Zion Williamson, Zion, The Goat"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
