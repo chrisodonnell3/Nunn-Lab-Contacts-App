@@ -12,7 +12,6 @@ class detailContactViewController: UIViewController {
     
     // TODO: Evelyn's work
     // Connected elements
-    // Need to connect these to the TableViewCell Controller tomorrow
     @IBOutlet weak var contactPicture: UIImageView!
     
     @IBOutlet weak var contactName: UILabel!
@@ -32,6 +31,12 @@ class detailContactViewController: UIViewController {
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set max lines to fit the labels' information
+        contactName.numberOfLines = 3
+        contactLocation.numberOfLines = 2
+        
+        // Initialize labels
         contactName.text = contact_name
         contactSex.text = contact_sex
         contactAge.text = contact_age

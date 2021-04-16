@@ -25,6 +25,9 @@
 		A67723B42624B97300747EEF /* landingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67723B32624B97300747EEF /* landingCollectionViewController.swift */; };
 		A67723C12624BFDF00747EEF /* personCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67723C02624BFDF00747EEF /* personCollectionViewCell.swift */; };
 		A6A5CD1D2629D26300802A8A /* headerCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5CD1C2629D26300802A8A /* headerCollectionReusableView.swift */; };
+		A6A5CD25262A08A100802A8A /* DefaultProfile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A6A5CD24262A08A100802A8A /* DefaultProfile.jpg */; };
+		A6A5CD35262A3C6200802A8A /* girl 1.png in Resources */ = {isa = PBXBuildFile; fileRef = A6A5CD34262A3C6200802A8A /* girl 1.png */; };
+		A6A5CD3A262A3C7100802A8A /* boy 1.png in Resources */ = {isa = PBXBuildFile; fileRef = A6A5CD39262A3C7100802A8A /* boy 1.png */; };
 		BE8225782623F3ED0023ADCA /* updateContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8225772623F3ED0023ADCA /* updateContactViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +73,9 @@
 		A67723B32624B97300747EEF /* landingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = landingCollectionViewController.swift; sourceTree = "<group>"; };
 		A67723C02624BFDF00747EEF /* personCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personCollectionViewCell.swift; sourceTree = "<group>"; };
 		A6A5CD1C2629D26300802A8A /* headerCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerCollectionReusableView.swift; sourceTree = "<group>"; };
+		A6A5CD24262A08A100802A8A /* DefaultProfile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = DefaultProfile.jpg; path = ../../../Images/DefaultProfile.jpg; sourceTree = "<group>"; };
+		A6A5CD34262A3C6200802A8A /* girl 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "girl 1.png"; path = "../../../../../../../Downloads/search/girl 1.png"; sourceTree = "<group>"; };
+		A6A5CD39262A3C7100802A8A /* boy 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "boy 1.png"; path = "../../../../../../../Downloads/search 2/boy 1.png"; sourceTree = "<group>"; };
 		BE8225772623F3ED0023ADCA /* updateContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updateContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +130,8 @@
 				A60EC03A260D4B4200AD10DF /* AppDelegate.swift */,
 				A60EC03C260D4B4200AD10DF /* SceneDelegate.swift */,
 				A6A5CD1C2629D26300802A8A /* headerCollectionReusableView.swift */,
+				A6A5CD39262A3C7100802A8A /* boy 1.png */,
+				A6A5CD34262A3C6200802A8A /* girl 1.png */,
 				A60EC03E260D4B4200AD10DF /* ViewController.swift */,
 				A60EC040260D4B4200AD10DF /* Main.storyboard */,
 				A67723C02624BFDF00747EEF /* personCollectionViewCell.swift */,
@@ -136,6 +144,7 @@
 				A60EC072260D590300AD10DF /* individualTableViewCell.swift */,
 				A60EC06D260D585A00AD10DF /* contactsTableViewController.swift */,
 				A60EC043260D4B4500AD10DF /* Assets.xcassets */,
+				A6A5CD24262A08A100802A8A /* DefaultProfile.jpg */,
 				A60EC045260D4B4500AD10DF /* LaunchScreen.storyboard */,
 				A60EC048260D4B4500AD10DF /* Info.plist */,
 				A67723B32624B97300747EEF /* landingCollectionViewController.swift */,
@@ -265,10 +274,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A66653312627950300FDF6D3 /* DataModel in Resources */,
+				A6A5CD35262A3C6200802A8A /* girl 1.png in Resources */,
 				A60EC047260D4B4500AD10DF /* LaunchScreen.storyboard in Resources */,
 				A66653322627950300FDF6D3 /* Base.lproj in Resources */,
 				A60EC044260D4B4500AD10DF /* Assets.xcassets in Resources */,
 				A60EC042260D4B4200AD10DF /* Main.storyboard in Resources */,
+				A6A5CD25262A08A100802A8A /* DefaultProfile.jpg in Resources */,
+				A6A5CD3A262A3C7100802A8A /* boy 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

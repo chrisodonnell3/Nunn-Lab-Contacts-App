@@ -149,39 +149,41 @@
                                     <rect key="frame" x="0.0" y="0.0" width="170" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ppt-oa-yT3">
-                                            <rect key="frame" x="8" y="135" width="148" height="61"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ppt-oa-yT3">
+                                            <rect key="frame" x="8" y="135" width="158" height="61"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="121" id="Nsx-hb-mH2"/>
-                                                <constraint firstAttribute="height" constant="37" id="fvy-J3-xqB"/>
+                                                <constraint firstAttribute="width" secondItem="Ppt-oa-yT3" secondAttribute="height" multiplier="158:61" id="2To-ni-ojU"/>
                                             </constraints>
                                             <attributedString key="attributedText">
                                                 <fragment content="Name(s)">
                                                     <attributes>
                                                         <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" size="14" name="AmericanTypewriter"/>
+                                                        <font key="NSFont" size="15" name="Optima-Regular"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHH-Qx-1sN">
-                                            <rect key="frame" x="6" y="4" width="150" height="125"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHH-Qx-1sN">
+                                            <rect key="frame" x="3" y="2" width="163" height="127"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="127" id="NMs-Ex-Y7g"/>
-                                                <constraint firstAttribute="width" constant="138" id="NbF-6K-Rr6"/>
+                                                <constraint firstAttribute="width" secondItem="gHH-Qx-1sN" secondAttribute="height" multiplier="163:127" id="9di-VC-IiS"/>
                                             </constraints>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="light"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Ppt-oa-yT3" firstAttribute="top" secondItem="gHH-Qx-1sN" secondAttribute="bottom" constant="4" id="c1W-8Z-Q31"/>
-                                        <constraint firstItem="gHH-Qx-1sN" firstAttribute="leading" secondItem="Xfl-HC-JW9" secondAttribute="leading" constant="6" id="gfU-X0-GPz"/>
-                                        <constraint firstItem="gHH-Qx-1sN" firstAttribute="top" secondItem="Xfl-HC-JW9" secondAttribute="top" constant="4" id="ns6-Ik-8p8"/>
-                                        <constraint firstItem="Ppt-oa-yT3" firstAttribute="leading" secondItem="Xfl-HC-JW9" secondAttribute="leading" constant="13.907991671413583" id="pZR-MI-44u"/>
+                                        <constraint firstAttribute="trailing" secondItem="gHH-Qx-1sN" secondAttribute="trailing" constant="4" id="068-R2-SRr"/>
+                                        <constraint firstItem="Ppt-oa-yT3" firstAttribute="top" secondItem="gHH-Qx-1sN" secondAttribute="bottom" constant="6" id="7Qg-aL-h2n"/>
+                                        <constraint firstItem="gHH-Qx-1sN" firstAttribute="leading" secondItem="Xfl-HC-JW9" secondAttribute="leading" constant="3" id="C90-tB-lE5"/>
+                                        <constraint firstItem="Ppt-oa-yT3" firstAttribute="leading" secondItem="Xfl-HC-JW9" secondAttribute="leading" constant="8" id="XlT-jK-gC2"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ppt-oa-yT3" secondAttribute="bottom" constant="4" id="jVh-yY-exb"/>
+                                        <constraint firstItem="gHH-Qx-1sN" firstAttribute="top" secondItem="Xfl-HC-JW9" secondAttribute="top" constant="2" id="yAR-TM-HFb"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ppt-oa-yT3" secondAttribute="trailing" constant="4" id="yoj-lH-eik"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <size key="customSize" width="170" height="200"/>
                                 <connections>
                                     <outlet property="contactNames" destination="Ppt-oa-yT3" id="c6W-SQ-bTj"/>
@@ -262,8 +264,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3F-Sv-TNC">
-                                <rect key="frame" x="20" y="311" width="374" height="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Contact Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3F-Sv-TNC">
+                                <rect key="frame" x="20" y="294" width="374" height="108"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -308,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lkd-WT-IUe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1909" y="127"/>
+            <point key="canvasLocation" x="1908.6956521739132" y="126.5625"/>
         </scene>
         <!--Update Contact View Controller-->
         <scene sceneID="z0L-ra-YrL">
@@ -344,8 +346,8 @@
     </scenes>
     <resources>
         <image name="blue_grey" width="150" height="200"/>
-        <systemColor name="separatorColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -10,15 +10,20 @@ import UIKit
 var resultSearchController = UISearchController()
 let tableData = ["One","Two","Three","Twenty-One"]
 var filteredTableData = [String]()
-var zionImage : UIImage = UIImage(named:"ProfileTest")!
 
 class landingCollectionViewController: UICollectionViewController {
     
-    let contactPhotos: [UIImage] = [UIImage(named: "ProfileTest")!]
-    let contactNames: [String] = ["Zion Williamson, Zion, The Goat"]
+    // Needs to be replaced with the CoreData framework
+    let contactPhotos: [UIImage] = [UIImage(named: "Boy")!, UIImage(named: "Girl")!,
+                                    UIImage(named: "ProfileTest")!]
+    let contactNames: [String] = ["John Doe, Johnny, Joseph", "Jane Doe, Jane", "Zion Williamson, Zion, The Goat"]
+    let contactAge: [Int] = [27, 25, 20]
+    let contactSex: [String] = ["Male", "Female", "Male"]
+    let contactLocation: [String] = ["Ontario", "Chicago", "Durham"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,13 +38,12 @@ class landingCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView,
                                  viewForSupplementaryElementOfKind kind: String,
                                  at indexPath: IndexPath) -> UICollectionReusableView {
-          // 1
+          
           switch kind {
-          // 2
           case UICollectionView.elementKindSectionHeader:
-            // 3
+            
             guard
-              let headerView = collectionView.dequeueReusableSupplementaryView(
+                let headerView = collectionView.dequeueReusableSupplementaryView(
                 ofKind: kind,
                 withReuseIdentifier: "headerCollection",
                 for: indexPath) as? headerCollectionReusableView
@@ -49,7 +53,7 @@ class landingCollectionViewController: UICollectionViewController {
 
             return headerView
           default:
-            // 4
+            
             assert(false, "Invalid element type")
           }
         }
@@ -68,14 +72,14 @@ class landingCollectionViewController: UICollectionViewController {
         
         if segue.identifier == "detailSegue"{
             let destVC = segue.destination as! detailContactViewController
-            //let index = collectionView.indexPathsForSelectedItems?.first
+            let index = collectionView.indexPathsForSelectedItems?.first
             
             // Populate data for detail VC 
-            destVC.contact_name = "Name(s): " + "Zion Williamson" // after plus will go data
-            destVC.contact_sex = "Sex: " + "Male" // after plus will go data
-            destVC.picture = zionImage
-            destVC.contact_age = "Age: " + "20" // after plus will go data
-            destVC.contact_location = "Location: " + "Duke" // after plus will go data
+            destVC.contact_name = "Name(s): " + contactNames[index!.row]
+            destVC.contact_sex = "Sex: " + contactSex[index!.row]
+            destVC.picture = contactPhotos[index!.row]
+            destVC.contact_age = "Age: " + String(contactAge[index!.row])
+            destVC.contact_location = "Location: " + contactLocation[index!.row]
         }
     }
     

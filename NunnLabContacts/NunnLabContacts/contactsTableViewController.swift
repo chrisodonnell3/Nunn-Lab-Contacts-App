@@ -59,7 +59,7 @@ class contactsTableViewController: UITableViewController {
         // Configure the cell...
         
         cell.ContactName.text = "Zion Williamson"
-        cell.ContactPhoto.image = UIImage(named: "ProfileTest")
+        //cell.ContactPhoto.image = UIImage(named: "ProfileTest")
 
         return cell
     }
@@ -111,11 +111,11 @@ class contactsTableViewController: UITableViewController {
             // let selectRow = tableView.indexPathForSelectedRow?.row
             
             // populate items
-            destVC.contact_name = "Name(s): " + "Zion Williamson" // after plus will go data
-            destVC.contact_sex = "Sex: " + "Male" // after plus will go data
-            destVC.picture = zionImage
-            destVC.contact_age = "Age: " + "20" // after plus will go data
-            destVC.contact_location = "Location: " + "Duke" // after plus will go data
+//            destVC.contact_name = "Name(s): " + "Zion Williamson" // after plus will go data
+//            destVC.contact_sex = "Sex: " + "Male" // after plus will go data
+//            destVC.picture = zionImage
+//            destVC.contact_age = "Age: " + "20" // after plus will go data
+//            destVC.contact_location = "Location: " + "Duke" // after plus will go data
             
         }
         
