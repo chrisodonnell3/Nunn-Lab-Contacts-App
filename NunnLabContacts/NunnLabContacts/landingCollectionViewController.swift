@@ -29,6 +29,31 @@ class landingCollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
 
+    // Function for the header/search bar in the Collection View
+    override func collectionView(_ collectionView: UICollectionView,
+                                 viewForSupplementaryElementOfKind kind: String,
+                                 at indexPath: IndexPath) -> UICollectionReusableView {
+          // 1
+          switch kind {
+          // 2
+          case UICollectionView.elementKindSectionHeader:
+            // 3
+            guard
+              let headerView = collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                withReuseIdentifier: "headerCollection",
+                for: indexPath) as? headerCollectionReusableView
+              else {
+                fatalError("Invalid view type")
+            }
+
+            return headerView
+          default:
+            // 4
+            assert(false, "Invalid element type")
+          }
+        }
+    
     
     // MARK: - Navigation
 
@@ -43,9 +68,9 @@ class landingCollectionViewController: UICollectionViewController {
         
         if segue.identifier == "detailSegue"{
             let destVC = segue.destination as! detailContactViewController
-            let index = collectionView.indexPathsForSelectedItems?.first
+            //let index = collectionView.indexPathsForSelectedItems?.first
             
-            // populate items
+            // Populate data for detail VC 
             destVC.contact_name = "Name(s): " + "Zion Williamson" // after plus will go data
             destVC.contact_sex = "Sex: " + "Male" // after plus will go data
             destVC.picture = zionImage
@@ -66,7 +91,7 @@ class landingCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
+        
         return contactPhotos.count
     }
 
@@ -86,6 +111,7 @@ class landingCollectionViewController: UICollectionViewController {
         return cell
     }
 
+    
     // MARK: UICollectionViewDelegate
 
     /*

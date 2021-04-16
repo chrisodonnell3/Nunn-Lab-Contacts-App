@@ -9,44 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="TNl-XL-AlP">
-            <objects>
-                <viewController id="l4b-es-viD" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5GH-EI-8JS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="nab-JJ-AgA">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="hGB-Ck-SDN"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Implementation Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZB-ba-y0g">
-                                <rect key="frame" x="71" y="330" width="282" height="28"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="YNd-aJ-w5J"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="nab-JJ-AgA" firstAttribute="leading" secondItem="YNd-aJ-w5J" secondAttribute="leading" id="0bL-0N-ht0"/>
-                            <constraint firstItem="nab-JJ-AgA" firstAttribute="centerX" secondItem="5GH-EI-8JS" secondAttribute="centerX" id="CA0-gv-qy8"/>
-                            <constraint firstItem="nab-JJ-AgA" firstAttribute="top" secondItem="YNd-aJ-w5J" secondAttribute="top" id="WNY-ih-DTj"/>
-                            <constraint firstItem="YNd-aJ-w5J" firstAttribute="bottom" secondItem="rZB-ba-y0g" secondAttribute="bottom" constant="367" id="vkL-5N-zfL"/>
-                            <constraint firstItem="rZB-ba-y0g" firstAttribute="leading" secondItem="YNd-aJ-w5J" secondAttribute="leading" constant="71" id="vmW-id-bV8"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="cz4-9c-JRy"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mkr-jr-0iA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1909" y="-1172"/>
-        </scene>
         <!--Create Contact View Controller-->
         <scene sceneID="uYU-bZ-gub">
             <objects>
@@ -77,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3W-ng-RDU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2780" y="-587"/>
+            <point key="canvasLocation" x="1909" y="-603"/>
         </scene>
         <!--Home-->
         <scene sceneID="SFI-4t-ZvU">
@@ -147,7 +109,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7IJ-00-2Th" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="222" y="250"/>
+            <point key="canvasLocation" x="109" y="197"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E7W-7W-c14">
@@ -175,13 +137,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="738-Cr-0mK">
                             <size key="itemSize" width="150" height="180"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="50" height="62"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="Cell" id="Uzk-Ja-ItL" customClass="personCollectionViewCell" customModule="NunnLabContacts" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="170" height="200"/>
+                                <rect key="frame" x="0.0" y="62" width="170" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Xfl-HC-JW9">
                                     <rect key="frame" x="0.0" y="0.0" width="170" height="200"/>
@@ -228,6 +190,23 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="headerCollection" id="kLI-kQ-gvD" customClass="headerCollectionReusableView" customModule="NunnLabContacts" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <searchBar contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vSL-1V-A8z">
+                                    <rect key="frame" x="0.0" y="9" width="414" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="414" id="Szf-67-wTE"/>
+                                        <constraint firstAttribute="height" constant="44" id="re9-nf-Tdg"/>
+                                    </constraints>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                            </subviews>
+                            <connections>
+                                <outlet property="searchLabel" destination="vSL-1V-A8z" id="Qrz-9D-DVX"/>
+                            </connections>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="kg9-NG-3uj" id="Ie7-2e-5QC"/>
                             <outlet property="delegate" destination="kg9-NG-3uj" id="W79-1x-8pO"/>
@@ -235,11 +214,6 @@
                     </collectionView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Home" id="cky-HN-Nll">
-                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="8bz-Ha-ENk">
-                            <connections>
-                                <segue destination="l4b-es-viD" kind="show" id="gcO-qs-CK9"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="l3j-Ge-2lm">
                             <connections>
                                 <segue destination="Iei-Jv-d6S" kind="show" identifier="createSegue" id="hJb-vZ-L38"/>

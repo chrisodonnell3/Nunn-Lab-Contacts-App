@@ -24,6 +24,7 @@
 		A66653322627950300FDF6D3 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A66653302627950200FDF6D3 /* Base.lproj */; };
 		A67723B42624B97300747EEF /* landingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67723B32624B97300747EEF /* landingCollectionViewController.swift */; };
 		A67723C12624BFDF00747EEF /* personCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67723C02624BFDF00747EEF /* personCollectionViewCell.swift */; };
+		A6A5CD1D2629D26300802A8A /* headerCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5CD1C2629D26300802A8A /* headerCollectionReusableView.swift */; };
 		BE8225782623F3ED0023ADCA /* updateContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8225772623F3ED0023ADCA /* updateContactViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		A66653302627950200FDF6D3 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		A67723B32624B97300747EEF /* landingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = landingCollectionViewController.swift; sourceTree = "<group>"; };
 		A67723C02624BFDF00747EEF /* personCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personCollectionViewCell.swift; sourceTree = "<group>"; };
+		A6A5CD1C2629D26300802A8A /* headerCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerCollectionReusableView.swift; sourceTree = "<group>"; };
 		BE8225772623F3ED0023ADCA /* updateContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updateContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,7 @@
 			children = (
 				A60EC03A260D4B4200AD10DF /* AppDelegate.swift */,
 				A60EC03C260D4B4200AD10DF /* SceneDelegate.swift */,
+				A6A5CD1C2629D26300802A8A /* headerCollectionReusableView.swift */,
 				A60EC03E260D4B4200AD10DF /* ViewController.swift */,
 				A60EC040260D4B4200AD10DF /* Main.storyboard */,
 				A67723C02624BFDF00747EEF /* personCollectionViewCell.swift */,
@@ -294,6 +297,7 @@
 				A60EC085260D5F1200AD10DF /* createContactViewController.swift in Sources */,
 				A60EC03B260D4B4200AD10DF /* AppDelegate.swift in Sources */,
 				A67723C12624BFDF00747EEF /* personCollectionViewCell.swift in Sources */,
+				A6A5CD1D2629D26300802A8A /* headerCollectionReusableView.swift in Sources */,
 				A60EC06E260D585A00AD10DF /* contactsTableViewController.swift in Sources */,
 				A60EC03D260D4B4200AD10DF /* SceneDelegate.swift in Sources */,
 				A67723B42624B97300747EEF /* landingCollectionViewController.swift in Sources */,
