@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34335834262B32ED002BEECA /* camera.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 34335833262B32ED002BEECA /* camera.jpeg */; };
 		347FCF95262B6DFD00BBD072 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347FCF94262B6DFD00BBD072 /* PersistenceManager.swift */; };
 		347FCF9A262B706E00BBD072 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347FCF99262B706E00BBD072 /* Contact+CoreDataClass.swift */; };
 		347FCF9F262B707000BBD072 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347FCF9E262B707000BBD072 /* Contact+CoreDataProperties.swift */; };
@@ -27,7 +26,6 @@
 		A60EC07D260D5E4700AD10DF /* mapContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC07C260D5E4700AD10DF /* mapContactViewController.swift */; };
 		A60EC085260D5F1200AD10DF /* createContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC084260D5F1200AD10DF /* createContactViewController.swift */; };
 		A60EC08A260D5FB100AD10DF /* detailContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC089260D5FB100AD10DF /* detailContactViewController.swift */; };
-		A66653312627950300FDF6D3 /* DataModel in Resources */ = {isa = PBXBuildFile; fileRef = A666532F2627950200FDF6D3 /* DataModel */; };
 		A66653322627950300FDF6D3 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A66653302627950200FDF6D3 /* Base.lproj */; };
 		A67723B42624B97300747EEF /* landingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67723B32624B97300747EEF /* landingCollectionViewController.swift */; };
 		A67723C12624BFDF00747EEF /* personCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67723C02624BFDF00747EEF /* personCollectionViewCell.swift */; };
@@ -53,7 +51,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		34335833262B32ED002BEECA /* camera.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = camera.jpeg; path = ../../../../camera.jpeg; sourceTree = "<group>"; };
 		347FCF94262B6DFD00BBD072 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		347FCF99262B706E00BBD072 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = "<group>"; };
 		347FCF9E262B707000BBD072 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -77,7 +74,6 @@
 		A60EC07C260D5E4700AD10DF /* mapContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapContactViewController.swift; sourceTree = "<group>"; };
 		A60EC084260D5F1200AD10DF /* createContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createContactViewController.swift; sourceTree = "<group>"; };
 		A60EC089260D5FB100AD10DF /* detailContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailContactViewController.swift; sourceTree = "<group>"; };
-		A666532F2627950200FDF6D3 /* DataModel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DataModel; sourceTree = "<group>"; };
 		A66653302627950200FDF6D3 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		A67723B32624B97300747EEF /* landingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = landingCollectionViewController.swift; sourceTree = "<group>"; };
 		A67723C02624BFDF00747EEF /* personCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -146,13 +142,11 @@
 				347FCF9E262B707000BBD072 /* Contact+CoreDataProperties.swift */,
 				347FCFA3262B707100BBD072 /* NunnLabContacts.xcdatamodeld */,
 				A66653302627950200FDF6D3 /* Base.lproj */,
-				A666532F2627950200FDF6D3 /* DataModel */,
 				A60EC07C260D5E4700AD10DF /* mapContactViewController.swift */,
 				A60EC072260D590300AD10DF /* individualTableViewCell.swift */,
 				A60EC06D260D585A00AD10DF /* contactsTableViewController.swift */,
 				A60EC084260D5F1200AD10DF /* createContactViewController.swift */,
 				A60EC043260D4B4500AD10DF /* Assets.xcassets */,
-				34335833262B32ED002BEECA /* camera.jpeg */,
 				A60EC045260D4B4500AD10DF /* LaunchScreen.storyboard */,
 				A60EC048260D4B4500AD10DF /* Info.plist */,
 				A67723B32624B97300747EEF /* landingCollectionViewController.swift */,
@@ -281,11 +275,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A66653312627950300FDF6D3 /* DataModel in Resources */,
 				A60EC047260D4B4500AD10DF /* LaunchScreen.storyboard in Resources */,
 				A66653322627950300FDF6D3 /* Base.lproj in Resources */,
 				A60EC044260D4B4500AD10DF /* Assets.xcassets in Resources */,
-				34335834262B32ED002BEECA /* camera.jpeg in Resources */,
 				A60EC042260D4B4200AD10DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
