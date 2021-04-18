@@ -9,16 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Create Contact View Controller-->
+        <!--Create Profile-->
         <scene sceneID="uYU-bZ-gub">
             <objects>
                 <viewController id="Iei-Jv-d6S" customClass="createContactViewController" customModule="NunnLabContacts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wt9-2x-m8s">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TVC to create a new contact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gF-mx-4Mw">
-                                <rect key="frame" x="36" y="244" width="342" height="311"/>
+                                <rect key="frame" x="36" y="244" width="342" height="323"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,83 +33,13 @@
                             <constraint firstItem="Y9m-7L-igo" firstAttribute="bottom" secondItem="5gF-mx-4Mw" secondAttribute="bottom" constant="170" id="NrG-nA-zhE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Nfe-Ds-FJg">
+                    <navigationItem key="navigationItem" title="Create Profile" id="Nfe-Ds-FJg">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="3Yl-QY-Qh8"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3W-ng-RDU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1909" y="-603"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="SFI-4t-ZvU">
-            <objects>
-                <tableViewController id="3Ta-qc-zT1" customClass="contactsTableViewController" customModule="NunnLabContacts" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dot-BW-05d">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" text="" id="n2s-q3-6w6">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </searchBar>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myContactCell" rowHeight="130" id="5nt-0r-MYx" customClass="individualTableViewCell" customModule="NunnLabContacts" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="130"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5nt-0r-MYx" id="FvR-0d-ZR4">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="88f-e8-vMU">
-                                            <rect key="frame" x="20" y="23" width="147" height="84"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="147" id="9FX-6B-QKt"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dt-2g-uK2">
-                                            <rect key="frame" x="204" y="13" width="210" height="94"/>
-                                            <attributedString key="attributedText">
-                                                <fragment content="Contact Name">
-                                                    <attributes>
-                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <font key="NSFont" metaFont="system" size="25"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="88f-e8-vMU" firstAttribute="leading" secondItem="FvR-0d-ZR4" secondAttribute="leadingMargin" id="4CI-IT-zEZ"/>
-                                        <constraint firstItem="88f-e8-vMU" firstAttribute="top" secondItem="FvR-0d-ZR4" secondAttribute="topMargin" constant="12" id="CfQ-Rd-oQL"/>
-                                        <constraint firstItem="88f-e8-vMU" firstAttribute="bottom" secondItem="0dt-2g-uK2" secondAttribute="bottom" id="HC7-Rb-fLc"/>
-                                        <constraint firstItem="0dt-2g-uK2" firstAttribute="top" secondItem="FvR-0d-ZR4" secondAttribute="topMargin" constant="2" id="Omd-Rn-eyC"/>
-                                        <constraint firstItem="0dt-2g-uK2" firstAttribute="leading" secondItem="88f-e8-vMU" secondAttribute="trailing" constant="37" id="i5h-d7-RgV"/>
-                                        <constraint firstItem="88f-e8-vMU" firstAttribute="centerY" secondItem="FvR-0d-ZR4" secondAttribute="centerY" id="lVK-rB-Rlg"/>
-                                        <constraint firstAttribute="trailing" secondItem="0dt-2g-uK2" secondAttribute="trailing" id="oa7-0x-LYp"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="ContactName" destination="0dt-2g-uK2" id="M6U-5W-gTK"/>
-                                    <outlet property="ContactPhoto" destination="88f-e8-vMU" id="TFg-tM-HXL"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="3Ta-qc-zT1" id="s5n-G7-TdY"/>
-                            <outlet property="delegate" destination="3Ta-qc-zT1" id="E5O-cb-Xba"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Home" id="qGD-vI-I3s">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="987-2F-Mo5"/>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7IJ-00-2Th" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="109" y="197"/>
+            <point key="canvasLocation" x="2448" y="-603"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E7W-7W-c14">
@@ -132,7 +62,7 @@
             <objects>
                 <collectionViewController title="Home" id="kg9-NG-3uj" customClass="landingCollectionViewController" customModule="NunnLabContacts" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ndk-qY-hwJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="738-Cr-0mK">
@@ -234,40 +164,46 @@
             <objects>
                 <viewController id="nKW-4e-3hX" customClass="detailContactViewController" customModule="NunnLabContacts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LHN-KF-mBJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kXY-uM-SAL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="237"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="249"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue_grey" translatesAutoresizingMaskIntoConstraints="NO" id="17Z-OU-mLX">
-                                <rect key="frame" x="0.0" y="282" width="414" height="128"/>
+                                <rect key="frame" x="0.0" y="260" width="414" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="3RX-Ca-trL"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7m-Sf-WEF">
-                                <rect key="frame" x="20" y="429" width="36" height="27"/>
+                                <rect key="frame" x="20" y="407" width="36" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYL-K6-t3o">
-                                <rect key="frame" x="20" y="497" width="38" height="27"/>
+                                <rect key="frame" x="20" y="475" width="38" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwB-Vc-KqT">
-                                <rect key="frame" x="20" y="564" width="82" height="27"/>
+                                <rect key="frame" x="20" y="542" width="82" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Contact Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3F-Sv-TNC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3F-Sv-TNC" userLabel="Bold Regular">
                                 <rect key="frame" x="20" y="294" width="374" height="108"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <nil key="textColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Contact Name">
+                                        <attributes>
+                                            <font key="NSFont" size="23" name="TrebuchetMS-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -310,14 +246,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lkd-WT-IUe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1908.6956521739132" y="126.5625"/>
+            <point key="canvasLocation" x="951" y="217"/>
         </scene>
-        <!--Update Contact View Controller-->
+        <!--Edit Profile-->
         <scene sceneID="z0L-ra-YrL">
             <objects>
                 <viewController storyboardIdentifier="Update Contact View Controller" id="4iB-5d-zRd" customClass="updateContactViewController" customModule="NunnLabContacts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XLX-6k-Pb3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Update Contact Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JY-8P-0JO">
@@ -335,15 +271,22 @@
                             <constraint firstItem="6JY-8P-0JO" firstAttribute="centerX" secondItem="XLX-6k-Pb3" secondAttribute="centerX" id="j34-NJ-xjd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="aL8-Ln-8vd">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="X23-9V-voD"/>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="aL8-Ln-8vd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="X23-9V-voD">
+                            <connections>
+                                <segue destination="kg9-NG-3uj" kind="show" id="drk-n5-hjd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lE4-os-KB3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2780" y="127"/>
+            <point key="canvasLocation" x="2448" y="117"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="drk-n5-hjd"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="blue_grey" width="150" height="200"/>
         <systemColor name="opaqueSeparatorColor">
