@@ -17,7 +17,7 @@ extension Contact {
     }
 
     @NSManaged public var name: String
-    @NSManaged public var birthdate: Date?
+    @NSManaged public var birthdate: String?
     @NSManaged public var sex: String?
     @NSManaged public var aliases: [String]?
     @NSManaged public var location: String?

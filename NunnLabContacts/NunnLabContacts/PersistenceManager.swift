@@ -60,7 +60,7 @@ final class PersistenceManager {
     }
     
     // MARK: - for create profile functionality
-    func insertContact(name: String, aliases: [String]?, birthdate: Date?, sex: String?, location: String?, picture: Data?) {
+    func insertContact(name: String, aliases: [String]?, birthdate: String?, sex: String?, location: String?, picture: Data?) {
         let contact = Contact(context: context)
         contact.name = name
         contact.aliases = aliases
@@ -73,7 +73,7 @@ final class PersistenceManager {
     
     // MARK: - for edit profile functionality
     // specify which contact object and only input the updated fields, leave anything else empty
-    func updateContact(contact: Contact, name: String?, aliases: [String]?, birthdate: Date?, sex: String?, location: String?, picture: Data?) {
+    func updateContact(contact: Contact, name: String?, aliases: [String]?, birthdate: String?, sex: String?, location: String?, picture: Data?) {
         contact.name = (name == nil) ? contact.name : name!
         contact.aliases = (aliases == nil) ? contact.aliases : aliases!
         contact.birthdate = (birthdate == nil) ? contact.birthdate : birthdate!
