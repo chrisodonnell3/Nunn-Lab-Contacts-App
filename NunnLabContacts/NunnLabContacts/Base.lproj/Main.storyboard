@@ -18,7 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-<<<<<<< HEAD
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Required" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ycd-8i-13L">
                                 <rect key="frame" x="180" y="102" width="180" height="34"/>
                                 <constraints>
@@ -153,10 +152,8 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKM-MF-uy1">
                                 <rect key="frame" x="61" y="350" width="86" height="21"/>
-=======
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TVC to create a new contact" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gF-mx-4Mw">
                                 <rect key="frame" x="36" y="244" width="342" height="323"/>
->>>>>>> cbbc5c501e9db98d7f0b3974b31a185073c491ae
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -212,7 +209,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3W-ng-RDU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="1908.6956521739132" y="-603.34821428571422"/>
         </scene>
         <!--Home-->
@@ -284,9 +280,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7IJ-00-2Th" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="109" y="197"/>
-=======
             <point key="canvasLocation" x="2448" y="-603"/>
->>>>>>> cbbc5c501e9db98d7f0b3974b31a185073c491ae
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="E7W-7W-c14">
