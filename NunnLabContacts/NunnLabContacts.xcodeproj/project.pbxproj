@@ -152,7 +152,10 @@
 				A60EC06D260D585A00AD10DF /* contactsTableViewController.swift */,
 				A60EC084260D5F1200AD10DF /* createContactViewController.swift */,
 				A60EC043260D4B4500AD10DF /* Assets.xcassets */,
+<<<<<<< HEAD
 				34335833262B32ED002BEECA /* camera.jpeg */,
+=======
+>>>>>>> cbbc5c501e9db98d7f0b3974b31a185073c491ae
 				A60EC045260D4B4500AD10DF /* LaunchScreen.storyboard */,
 				A60EC048260D4B4500AD10DF /* Info.plist */,
 				A67723B32624B97300747EEF /* landingCollectionViewController.swift */,
