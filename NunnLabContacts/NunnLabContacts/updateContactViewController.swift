@@ -46,41 +46,41 @@ class updateContactViewController: UIViewController, UIImagePickerControllerDele
         uDOBStr = ucontactDOB.text
 
         // If values don't change, make it nil
-        if (ucontact?.name == unameStr) {
-            // we make value null
-            unameStr = nil
-        }
-        if (ucontact?.sex == usexStr) {
-            usexStr = nil
-        }
-        if (ucontact?.location == ulocationStr) {
-            ulocationStr = nil
-        }
-        if (ucontact?.birthdate == uDOBStr) {
-            uDOBStr = nil
-        }
-        if (ucontact?.picture == uimageData) {
-            uimageData = nil
-        } // We are going to skip the alias check lol
-
-        // Code continued
-        if ualiasStr != nil && ualiasStr!.count != 0 {
-            ualiasArray = ualiasStr!.components(separatedBy: ", ")
-        }
-        // Not too positive on how to do Alias check before breaking everything
-        if (ucontact?.aliases == ualiasArray) {
-            ualiasArray.removeAll()
-        }
-
-
-        if unameStr!.count != 0 {
-            PersistenceManager.shared.updateContact(contact: ucontact!, name: unameStr, aliases: ualiasArray, birthdate: uDOBStr, sex: usexStr, location: ulocationStr, picture: uimageData)
-            usubmitButton.setTitle("Updated!", for: .normal)
-            ucontactNames.layer.borderWidth = 0
-        } else {
-            ucontactNames.layer.borderWidth = 1
-            ucontactNames.layer.borderColor = UIColor.red.cgColor
-        }
+//        if (ucontact?.name == unameStr) {
+//            // we make value null
+//            unameStr = nil
+//        }
+//        if (ucontact?.sex == usexStr) {
+//            usexStr = nil
+//        }
+//        if (ucontact?.location == ulocationStr) {
+//            ulocationStr = nil
+//        }
+//        if (ucontact?.birthdate == uDOBStr) {
+//            uDOBStr = nil
+//        }
+//        if (ucontact?.picture == uimageData) {
+//            uimageData = nil
+//        } // We are going to skip the alias check lol
+//
+//        // Code continued
+//        if ualiasStr != nil && ualiasStr!.count != 0 {
+//            ualiasArray = ualiasStr!.components(separatedBy: ", ")
+//        }
+//        // Not too positive on how to do Alias check before breaking everything
+//        if (ucontact?.aliases == ualiasArray) {
+//            ualiasArray.removeAll()
+//        }
+//
+//
+//        if unameStr!.count != 0 {
+//            PersistenceManager.shared.updateContact(contact: ucontact!, name: unameStr, aliases: ualiasArray, birthdate: uDOBStr, sex: usexStr, location: ulocationStr, picture: uimageData)
+//            usubmitButton.setTitle("Updated!", for: .normal)
+//            ucontactNames.layer.borderWidth = 0
+//        } else {
+//            ucontactNames.layer.borderWidth = 1
+//            ucontactNames.layer.borderColor = UIColor.red.cgColor
+//        }
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

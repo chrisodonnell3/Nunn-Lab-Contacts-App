@@ -58,7 +58,7 @@
 		13E9AF21D640E3CA5FFFCF93269FA56C /* Pods-NunnLabContacts-NunnLabContactsUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NunnLabContacts-NunnLabContactsUITests-Info.plist"; sourceTree = "<group>"; };
 		179BFBB9329EFDEA45566F65B1BBCA5D /* Pods-NunnLabContacts-NunnLabContactsUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NunnLabContacts-NunnLabContactsUITests-umbrella.h"; sourceTree = "<group>"; };
 		2184B5D3479EC3872386EAFF1D3DFB38 /* Pods-NunnLabContacts-NunnLabContactsUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NunnLabContacts-NunnLabContactsUITests.modulemap"; sourceTree = "<group>"; };
-		28DE2BCFD27F3DDE79C96530A153D3DA /* Pods_NunnLabContacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NunnLabContacts.framework; path = "Pods-NunnLabContacts.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28DE2BCFD27F3DDE79C96530A153D3DA /* Pods_NunnLabContacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NunnLabContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ABA824BAD6F9237F10FFBDBDFEAA915 /* Pods-NunnLabContactsTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NunnLabContactsTests-Info.plist"; sourceTree = "<group>"; };
 		33A7CEC1012DE9BBF4CD4E919691E41B /* TrieNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TrieNode.swift; path = StringSearchKit/Classes/TrieNode.swift; sourceTree = "<group>"; };
 		34163E1EB147BB70321B50BB5FFB0B69 /* StringSearchKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StringSearchKit-umbrella.h"; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		38BDF4E59B8D3481191773E348CF1400 /* Pods-NunnLabContacts-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NunnLabContacts-frameworks.sh"; sourceTree = "<group>"; };
 		3F6F294E84335D7955436DD65DE0A885 /* Pods-NunnLabContactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NunnLabContactsTests.release.xcconfig"; sourceTree = "<group>"; };
 		424B89BC891BA38D29460E1A719737BA /* StringSearchKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StringSearchKit.debug.xcconfig; sourceTree = "<group>"; };
-		4449D79CD99F475BE80464D586D05A12 /* StringSearchKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = StringSearchKit.framework; path = StringSearchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4449D79CD99F475BE80464D586D05A12 /* StringSearchKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StringSearchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4625A507BC3305EB0446A83E923AB52B /* Pods-NunnLabContacts-NunnLabContactsUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NunnLabContacts-NunnLabContactsUITests-dummy.m"; sourceTree = "<group>"; };
 		498E95A32DE9E8BB46F6F9A1410C3696 /* Sequence+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Sequence+Additions.swift"; path = "StringSearchKit/Classes/Sequence+Additions.swift"; sourceTree = "<group>"; };
 		4A290B8834B113C9E7B6DC7CD18E7F0C /* StringSearchKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StringSearchKit-prefix.pch"; sourceTree = "<group>"; };
@@ -77,17 +77,17 @@
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		75CEA4D6C289F99129AD2E7C63917BDE /* StringLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringLoader.swift; path = StringSearchKit/Classes/StringLoader.swift; sourceTree = "<group>"; };
 		78A3991A5B83424931FD221C694D946F /* Trie.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Trie.swift; path = StringSearchKit/Classes/Trie.swift; sourceTree = "<group>"; };
-		7C2DDF40CB2F0222A29BD59FF2136022 /* Pods_NunnLabContacts_NunnLabContactsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NunnLabContacts_NunnLabContactsUITests.framework; path = "Pods-NunnLabContacts-NunnLabContactsUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C2DDF40CB2F0222A29BD59FF2136022 /* Pods_NunnLabContacts_NunnLabContactsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NunnLabContacts_NunnLabContactsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		882919197A301967CDE75F9DD1D0F31D /* Pods-NunnLabContactsTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NunnLabContactsTests-dummy.m"; sourceTree = "<group>"; };
 		8EA5EAE4952E01B6BB7354936B2BE3E5 /* StringSearchKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "StringSearchKit-Info.plist"; sourceTree = "<group>"; };
 		92FAB696D4D72EA0E47DADB99730F467 /* Pods-NunnLabContacts-NunnLabContactsUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NunnLabContacts-NunnLabContactsUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		96E18F13FADF12676B9627CC371B2FC4 /* Pods-NunnLabContacts-NunnLabContactsUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NunnLabContacts-NunnLabContactsUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A0F22BBF0F38DD76A5D6786F8ABA2B99 /* Pods-NunnLabContacts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NunnLabContacts-dummy.m"; sourceTree = "<group>"; };
 		A269AF361965F5D579FA5977D90E9A37 /* Pods-NunnLabContactsTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NunnLabContactsTests.modulemap"; sourceTree = "<group>"; };
 		A98B1D1D316256A9CC52A13686C37E5A /* StringSearchKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StringSearchKit.release.xcconfig; sourceTree = "<group>"; };
 		AFEFB281F8522BCE2322B0E88F0174ED /* StringSearchKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StringSearchKit-dummy.m"; sourceTree = "<group>"; };
-		B7D6CF79C4F109A6D73559B7CA3B9B2B /* Pods_NunnLabContactsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NunnLabContactsTests.framework; path = "Pods-NunnLabContactsTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7D6CF79C4F109A6D73559B7CA3B9B2B /* Pods_NunnLabContactsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NunnLabContactsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01B5018B9929AED42FA73296881BE56 /* Pods-NunnLabContacts-NunnLabContactsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NunnLabContacts-NunnLabContactsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8EA92B2487B2FC530F13ADC54284324 /* Pods-NunnLabContacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NunnLabContacts.release.xcconfig"; sourceTree = "<group>"; };
 		CE0BE1570153E1EA390C5FACE87428F0 /* StringDictionaryType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringDictionaryType.swift; path = StringSearchKit/Classes/StringDictionaryType.swift; sourceTree = "<group>"; };
@@ -270,7 +270,6 @@
 				33A7CEC1012DE9BBF4CD4E919691E41B /* TrieNode.swift */,
 				9D92595EEBD7816191B51FDBC3350AA2 /* Support Files */,
 			);
-			name = StringSearchKit;
 			path = StringSearchKit;
 			sourceTree = "<group>";
 		};
@@ -394,7 +393,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -668,7 +667,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/StringSearchKit/StringSearchKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/StringSearchKit/StringSearchKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -876,7 +875,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/StringSearchKit/StringSearchKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/StringSearchKit/StringSearchKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

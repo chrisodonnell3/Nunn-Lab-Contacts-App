@@ -65,7 +65,7 @@ class createContactViewController: UIViewController, UIImagePickerControllerDele
             aliasArray = aliasStr!.components(separatedBy: ", ")
         }
         if nameStr.count != 0 {
-            PersistenceManager.shared.insertContact(name: nameStr, aliases: aliasArray, birthdate: birthdayStr, sex: sexStr, location: locationStr, picture: imageData)
+//            PersistenceManager.shared.insertContact(name: nameStr, aliases: aliasArray, birthdate: birthdayStr, sex: sexStr, location: locationStr, picture: imageData)
             submit.setTitle("Success!", for: .normal)
             name.layer.borderWidth = 0
         } else {
