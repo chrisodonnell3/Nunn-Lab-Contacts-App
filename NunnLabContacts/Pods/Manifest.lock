@@ -1,0 +1,16 @@
+PODS:
+  - StringSearchKit (2.0.0)
+
+DEPENDENCIES:
+  - StringSearchKit
+
+SPEC REPOS:
+  trunk:
+    - StringSearchKit
+
+SPEC CHECKSUMS:
+  StringSearchKit: 43008e7baee662e44e9902cd7349c5085e6c3969
+
+PODFILE CHECKSUM: ea1bcd8a8cac5fd29eb5279440cfaaa2c15d735a
+
+COCOAPODS: 1.10.1

@@ -3,13 +3,28 @@
 //  NunnLabContacts
 //
 //  Created by Chris O'Donnell on 4/12/21.
-//
+//  Implemented Search by Ada Wong on 4/18/21.
 
 import UIKit
+import StringSearchKit
 
-var resultSearchController = UISearchController()
+let searchController = UISearchController(searchResultsController: nil)
 let tableData = ["One","Two","Three","Twenty-One"]
 var filteredTableData = [String]()
+
+extension landingCollectionViewController: UISearchResultsUpdating {
+  func updateSearchResults(for searchController: UISearchController) {
+    //text of inputted search
+    let input = searchController.searchBar.text
+    //list of all names
+    let names = StringDictionary(withStrings: ["Owen", "Owne", "Odog", "Oman", "Owenn", "Dylan", "Luke", "Gabriel", "Anthony", "Isaac", "Grayson", "Jack", "Julian", "Levi"],preserveCase: true)
+    //search names and returns empty if no results
+    let searchResults = names.strings(withPrefix: input ?? "")
+    //prints list of names after search
+    print(searchResults)
+    
+  }
+}
 
 class landingCollectionViewController: UICollectionViewController {
     
@@ -23,7 +38,13 @@ class landingCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -148,3 +169,4 @@ class landingCollectionViewController: UICollectionViewController {
     */
 
 }
+
