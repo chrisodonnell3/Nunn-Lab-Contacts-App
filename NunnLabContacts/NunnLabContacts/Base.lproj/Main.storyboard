@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="Iei-Jv-d6S" customClass="createContactViewController" customModule="NunnLabContacts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wt9-2x-m8s">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaZ-HX-gb6">
-                                <rect key="frame" x="164" y="609" width="86" height="48"/>
+                                <rect key="frame" x="164" y="631" width="86" height="48"/>
                                 <color key="backgroundColor" red="0.0" green="0.49411764705882355" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="473-5H-iq1"/>
@@ -90,7 +90,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmR-cr-mP5">
-                                <rect key="frame" x="145" y="467" width="124" height="48"/>
+                                <rect key="frame" x="145" y="489" width="124" height="48"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="sET-Th-hKh"/>
@@ -110,7 +110,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rij-2G-Oeu">
-                                <rect key="frame" x="175" y="393" width="62" height="68.5"/>
+                                <rect key="frame" x="175" y="415" width="62" height="68.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68.5" id="TIv-sZ-BYI"/>
                                 </constraints>
@@ -228,18 +228,18 @@
             <objects>
                 <collectionViewController title="Home" id="kg9-NG-3uj" customClass="landingCollectionViewController" customModule="NunnLabContacts" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ndk-qY-hwJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="738-Cr-0mK">
                             <size key="itemSize" width="193" height="224"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="Cell" id="Uzk-Ja-ItL" customClass="personCollectionViewCell" customModule="NunnLabContacts" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="193" height="224"/>
+                                <rect key="frame" x="0.0" y="50" width="193" height="224"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Xfl-HC-JW9">
                                     <rect key="frame" x="0.0" y="0.0" width="193" height="224"/>
@@ -288,6 +288,10 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headerCollection" id="548-He-sJH" customClass="headerCollectionReusableView" customModule="NunnLabContacts" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="kg9-NG-3uj" id="Ie7-2e-5QC"/>
                             <outlet property="delegate" destination="kg9-NG-3uj" id="W79-1x-8pO"/>
@@ -313,20 +317,20 @@
             <objects>
                 <viewController id="nKW-4e-3hX" customClass="detailContactViewController" customModule="NunnLabContacts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LHN-KF-mBJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kXY-uM-SAL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="249"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="237"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2021-04-18 at 6.31.06 PM" translatesAutoresizingMaskIntoConstraints="NO" id="17Z-OU-mLX">
-                                <rect key="frame" x="0.0" y="260" width="414" height="128"/>
+                                <rect key="frame" x="0.0" y="282" width="414" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="3RX-Ca-trL"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3F-Sv-TNC" userLabel="Bold Regular">
-                                <rect key="frame" x="12" y="270" width="313" height="55"/>
+                                <rect key="frame" x="12" y="292" width="313" height="55"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Contact Name">
                                         <attributes>
@@ -344,19 +348,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7m-Sf-WEF">
-                                <rect key="frame" x="20" y="432" width="36" height="27"/>
+                                <rect key="frame" x="20" y="454" width="36" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYL-K6-t3o">
-                                <rect key="frame" x="20" y="500" width="46" height="27"/>
+                                <rect key="frame" x="20" y="522" width="46" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwB-Vc-KqT">
-                                <rect key="frame" x="20" y="567" width="82" height="27"/>
+                                <rect key="frame" x="20" y="589" width="82" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -411,11 +415,11 @@
             <objects>
                 <viewController storyboardIdentifier="Update Contact View Controller" id="4iB-5d-zRd" customClass="updateContactViewController" customModule="NunnLabContacts" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XLX-6k-Pb3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="831-fE-m6L">
-                                <rect key="frame" x="164" y="570" width="86" height="48"/>
+                                <rect key="frame" x="164" y="558" width="86" height="48"/>
                                 <color key="backgroundColor" red="0.0" green="0.4941176471" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="WIa-5d-h0u"/>
@@ -482,7 +486,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkO-RM-Tog">
-                                <rect key="frame" x="145" y="462" width="124" height="48"/>
+                                <rect key="frame" x="145" y="450" width="124" height="48"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="W4k-J0-6lW"/>
@@ -502,30 +506,30 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfy-bW-ZMe">
-                                <rect key="frame" x="176" y="410" width="61" height="47"/>
+                                <rect key="frame" x="176" y="398" width="61" height="47"/>
                                 <state key="normal" image="camera"/>
                                 <connections>
                                     <action selector="takePicture:" destination="4iB-5d-zRd" eventType="touchUpInside" id="SrR-3Y-PFT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alias (Separated by commas)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZp-Pg-Brf">
-                                <rect key="frame" x="20" y="241" width="151.5" height="71"/>
+                                <rect key="frame" x="20" y="241" width="151.5" height="59"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Optional" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CKF-yb-BH2">
-                                <rect key="frame" x="178.5" y="249" width="181.5" height="55"/>
+                                <rect key="frame" x="178.5" y="249" width="181.5" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="dd-MM-yyyy" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iWY-vH-Hkj">
-                                <rect key="frame" x="176" y="329.5" width="180" height="34"/>
+                                <rect key="frame" x="176" y="317.5" width="180" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4D-Js-blW">
-                                <rect key="frame" x="61" y="336" width="86" height="21"/>
+                                <rect key="frame" x="61" y="324" width="86" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="PkS-xG-SN1"/>
                                     <constraint firstAttribute="width" constant="86" id="bK7-oC-tgE"/>
@@ -595,6 +599,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="73R-Th-pI8"/>
         <segue reference="hkm-hR-qdg"/>
     </inferredMetricsTieBreakers>
     <resources>
