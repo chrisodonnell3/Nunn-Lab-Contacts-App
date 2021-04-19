@@ -28,17 +28,14 @@ extension landingCollectionViewController: UISearchResultsUpdating {
 
 class landingCollectionViewController: UICollectionViewController {
     
-    // Needs to be replaced with the CoreData framework
-    let contactPhotos: [UIImage] = [UIImage(named: "Boy")!, UIImage(named: "Girl")!,
-                                    UIImage(named: "ProfileTest")!]
-    let contactNames: [String] = ["John Doe", "Jane Doe", "Zion Williamson"]
-    let contactAliases: [String] = ["Johnny, Joseph","Jane","Zion, The Goat"]
-    let contactDOB: [String] = ["01-25-1999", "02-05-1996", "07-06-2000"]
-    let contactSex: [String] = ["Male", "Female", "Male"]
-    let contactLocation: [String] = ["Ontario", "Chicago", "Durham"]
+   
+    var contactsList: [Contact] = PersistenceManager.shared.getContacts()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        contactsList = PersistenceManager.shared.getContacts()
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -97,27 +94,39 @@ class landingCollectionViewController: UICollectionViewController {
             let destVC = segue.destination as! detailContactViewController
             let index = collectionView.indexPathsForSelectedItems?.first
             
-            // Populate data for detail VC 
-            destVC.contact_name = "Name: " + contactNames[index!.row]
-            destVC.contact_sex = "Sex: " + contactSex[index!.row]
-            destVC.contact_aliases = "Aliases: " + contactAliases[index!.row]
-            destVC.picture = contactPhotos[index!.row]
-            destVC.contact_age = "Date of Birth: " + String(contactDOB[index!.row])
-            destVC.contact_location = "Location: " + contactLocation[index!.row]
+            // Set default data in case of nil errors
+            let defaultPicture = UIImage(named: "DefaultProfile")
+            let cellPicture = contactsList[index!.row].picture ?? defaultPicture?.pngData()
+            
+            // Populate data for detail VC
+           
+            let namesString = contactsList[index!.row].names!.joined(separator: ", ")
+           
+           // Combine name with aliases' array and pipe into string
+           destVC.contact_name = "Name(s): " + namesString
+           
+           // Index the rest of contact's information
+           destVC.contact_sex = "Sex: " + contactsList[index!.row].sex!
+           destVC.picture = UIImage(data: cellPicture!)
+           destVC.contact_age = "Age: " + String(getAge(birthdate: contactsList[index!.row].birthdate!))
+           destVC.contact_location = "Location: " + contactsList[index!.row].location!
         }
         
         if segue.identifier == "editProfileSegue" {
             // Need to populate data with CoreData Framework: need to pass contact from createContactViewController
             let destVC = segue.destination as! updateContactViewController
             let index = collectionView.indexPathsForSelectedItems?.first
+            
+            // Default picture in case of nil error
+            let defaultPicture = UIImage(named: "DefaultProfile")
+            let cellPicture = contactsList[index!.row].picture ?? defaultPicture?.pngData()
 
             // missing uimage data not sure how to pass
-            destVC.unameStr = "Name: " + contactNames[index!.row] // this doesn't work?
-            destVC.usexStr = "Sex: " + contactSex[index!.row]
-            destVC.ualiasStr = "Aliases: " + contactAliases[index!.row]
-            // destVC.uimageData = contactPhotos[index!.row]
-            destVC.uDOBStr = "Date of Birth: " + String(contactDOB[index!.row])
-            destVC.ulocationStr = "Location: " + contactLocation[index!.row]
+            destVC.unameStr = "Names: " + contactsList[index!.row].names!.joined(separator: ", ")
+            destVC.usexStr = "Sex: " + contactsList[index!.row].sex!
+            destVC.uimageData = cellPicture
+            destVC.uDOBStr = "Age: " + String(getAge(birthdate: contactsList[index!.row].birthdate!))
+            destVC.ulocationStr = "Location: " + contactsList[index!.row].location!
             
         }
     }
@@ -135,17 +144,25 @@ class landingCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return contactPhotos.count
+        return contactsList.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         var cell = UICollectionViewCell()
-        
+                
         if let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? personCollectionViewCell {
     
-            customCell.contactPhoto.image = contactPhotos[indexPath.row]
-            customCell.contactNames.text = contactNames[indexPath.row]
+            let defaultPicture = UIImage(named: "DefaultProfile")
+            let cellPicture = contactsList[indexPath.row].picture ?? defaultPicture?.pngData()
+            customCell.contactPhoto.image = UIImage(data: cellPicture!)
+            
+        
+            // Retrive name and aliases for specific contact
+            
+            let namesString = contactsList[indexPath.row].names!.joined(separator: ", ")
+            
+            customCell.contactNames.text = namesString
              
             cell = customCell
         
@@ -154,6 +171,19 @@ class landingCollectionViewController: UICollectionViewController {
         return cell
     }
 
+    func getAge(birthdate: String) -> Int{
+            // Retrieves age of contact from specified birth date
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+            dateFormatter.dateFormat = "dd-MM-yyyy"
+            
+            let baseDate = dateFormatter.date(from: "00-00-0000")
+            
+            let date = dateFormatter.date(from: birthdate)
+            let age = Calendar.current.dateComponents([.year], from: (date ?? baseDate)!, to: Date()).year ?? 0
+            return age
+    }
     
     // MARK: UICollectionViewDelegate
 
