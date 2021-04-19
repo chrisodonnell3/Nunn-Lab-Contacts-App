@@ -72,6 +72,8 @@ class createContactViewController: UIViewController, UIImagePickerControllerDele
         } else {
             name.layer.borderWidth = 1
             name.layer.borderColor = UIColor.red.cgColor
+            id.layer.borderWidth = 1
+            id.layer.borderColor = UIColor.red.cgColor
         }
     }
     /*s
