@@ -21,6 +21,8 @@ extension Contact {
     @NSManaged public var names: [String]?
     @NSManaged public var location: String?
     @NSManaged public var picture: Data?
+    @NSManaged public var id: String?
+
 
 }
 
