@@ -102,18 +102,19 @@ class landingCollectionViewController: UICollectionViewController {
            
             let namesString = contactsList[index!.row].names!.joined(separator: ", ")
            
-           // Combine name with aliases' array and pipe into string
-           destVC.contact_name = "Name(s): " + namesString
+            // Combine name with aliases' array and pipe into string
+            destVC.contact_name = "Name(s): " + namesString
            
-           // Index the rest of contact's information
-           destVC.contact_sex = "Sex: " + contactsList[index!.row].sex!
-           destVC.picture = UIImage(data: cellPicture!)
-           destVC.contact_age = "Age: " + String(getAge(birthdate: contactsList[index!.row].birthdate!))
-           destVC.contact_location = "Location: " + contactsList[index!.row].location!
+            // Index the rest of contact's information
+            destVC.contact_sex = "Sex: " + contactsList[index!.row].sex!
+            destVC.picture = UIImage(data: cellPicture!)
+            destVC.contact_age = "Age: " + String(getAge(birthdate: contactsList[index!.row].birthdate!))
+            destVC.contact_location = "Location: " + contactsList[index!.row].location!
         }
         
         if segue.identifier == "editProfileSegue" {
-            // Need to populate data with CoreData Framework: need to pass contact from createContactViewController
+            
+            
             let destVC = segue.destination as! updateContactViewController
             let index = collectionView.indexPathsForSelectedItems?.first
             
@@ -121,7 +122,6 @@ class landingCollectionViewController: UICollectionViewController {
             let defaultPicture = UIImage(named: "DefaultProfile")
             let cellPicture = contactsList[index!.row].picture ?? defaultPicture?.pngData()
 
-            // missing uimage data not sure how to pass
             destVC.unameStr = "Names: " + contactsList[index!.row].names!.joined(separator: ", ")
             destVC.usexStr = "Sex: " + contactsList[index!.row].sex!
             destVC.uimageData = cellPicture
