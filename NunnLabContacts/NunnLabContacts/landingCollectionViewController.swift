@@ -16,8 +16,9 @@ class landingCollectionViewController: UICollectionViewController {
     // Needs to be replaced with the CoreData framework
     let contactPhotos: [UIImage] = [UIImage(named: "Boy")!, UIImage(named: "Girl")!,
                                     UIImage(named: "ProfileTest")!]
-    let contactNames: [String] = ["John Doe, Johnny, Joseph", "Jane Doe, Jane", "Zion Williamson, Zion, The Goat"]
-    let contactAge: [Int] = [27, 25, 20]
+    let contactNames: [String] = ["John Doe", "Jane Doe", "Zion Williamson"]
+    let contactAliases: [String] = ["Johnny, Joseph","Jane","Zion, The Goat"]
+    let contactDOB: [String] = ["01-25-1999", "02-05-1996", "07-06-2000"]
     let contactSex: [String] = ["Male", "Female", "Male"]
     let contactLocation: [String] = ["Ontario", "Chicago", "Durham"]
 
@@ -71,15 +72,32 @@ class landingCollectionViewController: UICollectionViewController {
         }
         
         if segue.identifier == "detailSegue"{
+            // Need to populate data with CoreData Framework
             let destVC = segue.destination as! detailContactViewController
             let index = collectionView.indexPathsForSelectedItems?.first
             
             // Populate data for detail VC 
-            destVC.contact_name = "Name(s): " + contactNames[index!.row]
+            destVC.contact_name = "Name: " + contactNames[index!.row]
             destVC.contact_sex = "Sex: " + contactSex[index!.row]
+            destVC.contact_aliases = "Aliases: " + contactAliases[index!.row]
             destVC.picture = contactPhotos[index!.row]
-            destVC.contact_age = "Age: " + String(contactAge[index!.row])
+            destVC.contact_age = "Date of Birth: " + String(contactDOB[index!.row])
             destVC.contact_location = "Location: " + contactLocation[index!.row]
+        }
+        
+        if segue.identifier == "editProfileSegue" {
+            // Need to populate data with CoreData Framework: need to pass contact from createContactViewController
+            let destVC = segue.destination as! updateContactViewController
+            let index = collectionView.indexPathsForSelectedItems?.first
+
+            // missing uimage data not sure how to pass
+            destVC.unameStr = "Name: " + contactNames[index!.row] // this doesn't work?
+            destVC.usexStr = "Sex: " + contactSex[index!.row]
+            destVC.ualiasStr = "Aliases: " + contactAliases[index!.row]
+            // destVC.uimageData = contactPhotos[index!.row]
+            destVC.uDOBStr = "Date of Birth: " + String(contactDOB[index!.row])
+            destVC.ulocationStr = "Location: " + contactLocation[index!.row]
+            
         }
     }
     
