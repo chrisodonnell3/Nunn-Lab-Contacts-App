@@ -14,17 +14,18 @@ import UIKit
 class createContactViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
+    @IBOutlet weak var id: UITextField!
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var sex: UITextField!
     @IBOutlet weak var location: UITextField!
     @IBOutlet weak var alias: UITextField!
     @IBOutlet weak var birthday: UITextField!
     @IBOutlet weak var submit: UIButton!
-    var aliasArray = [String]()
-    var nameStr: String = ""
+    var idStr: String = ""
+    var namesArray = [String]()
+    var namesStr: String = ""
     var sexStr: String?
     var locationStr: String?
-    var aliasStr: String?
     var birthdayStr: String?
     var imageData: Data?
     
@@ -56,16 +57,16 @@ class createContactViewController: UIViewController, UIImagePickerControllerDele
     }
 
     @IBAction func createContact(_ sender: Any) {
-        nameStr = name.text!.trimmingCharacters(in: .whitespaces)
+        idStr = id.text!.trimmingCharacters(in: .whitespaces)
+        namesStr = name.text!.trimmingCharacters(in: .whitespaces)
         sexStr = sex.text
         locationStr = location.text
-        aliasStr = alias.text
         birthdayStr = birthday.text
-        if aliasStr != nil && aliasStr!.count != 0 {
-            aliasArray = aliasStr!.components(separatedBy: ", ")
+        if namesStr.count != 0 {
+            namesArray = namesStr.components(separatedBy: ", ")
         }
-        if nameStr.count != 0 {
-//            PersistenceManager.shared.insertContact(name: nameStr, aliases: aliasArray, birthdate: birthdayStr, sex: sexStr, location: locationStr, picture: imageData)
+        if namesStr.count != 0 && idStr.count != 0 {
+            PersistenceManager.shared.insertContact(id: idStr, names: namesArray, birthdate: birthdayStr, sex: sexStr, location: locationStr, picture: imageData)
             submit.setTitle("Success!", for: .normal)
             name.layer.borderWidth = 0
         } else {
