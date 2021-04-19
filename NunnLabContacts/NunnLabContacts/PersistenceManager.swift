@@ -60,10 +60,9 @@ final class PersistenceManager {
     }
     
     // MARK: - for create profile functionality
-    func insertContact(name: String, aliases: [String]?, birthdate: String?, sex: String?, location: String?, picture: Data?) {
+    func insertContact(names: [String]?, birthdate: String?, sex: String?, location: String?, picture: Data?) {
         let contact = Contact(context: context)
-        contact.name = name
-        contact.aliases = aliases
+        contact.names = names
         contact.birthdate = birthdate
         contact.sex = sex
         contact.location = location
@@ -73,9 +72,8 @@ final class PersistenceManager {
     
     // MARK: - for edit profile functionality
     // specify which contact object and only input the updated fields, leave anything else empty
-    func updateContact(contact: Contact, name: String?, aliases: [String]?, birthdate: String?, sex: String?, location: String?, picture: Data?) {
-        contact.name = (name == nil) ? contact.name : name!
-        contact.aliases = (aliases == nil) ? contact.aliases : aliases!
+    func updateContact(contact: Contact, names: [String]?, birthdate: String?, sex: String?, location: String?, picture: Data?) {
+        contact.names = (names == nil) ? contact.names : names!
         contact.birthdate = (birthdate == nil) ? contact.birthdate : birthdate!
         contact.sex = (sex == nil) ? contact.sex : sex!
         contact.location = (location == nil) ? contact.location: location!
@@ -92,9 +90,7 @@ final class PersistenceManager {
     
     private func printContacts(contacts: [Contact]) {
         contacts.forEach({ contact in
-            print("name: " + contact.name)
-            let aliases = contact.aliases ?? [String]()
-            print("aliases: " + aliases.joined(separator: ", ") + "\n")
+            
         })
     }
 }
