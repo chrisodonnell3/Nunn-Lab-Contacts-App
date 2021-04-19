@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		173D2414305E3DE0293F60C6 /* Pods_NunnLabContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10271E3BF049F936203CADEB /* Pods_NunnLabContacts.framework */; };
+		244E6B962DD18A5E6E865C74 /* Pods_NunnLabContactsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF9DB32E20C69243C908C33 /* Pods_NunnLabContactsTests.framework */; };
 		347FCF95262B6DFD00BBD072 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347FCF94262B6DFD00BBD072 /* PersistenceManager.swift */; };
 		347FCF9A262B706E00BBD072 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347FCF99262B706E00BBD072 /* Contact+CoreDataClass.swift */; };
 		347FCF9F262B707000BBD072 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347FCF9E262B707000BBD072 /* Contact+CoreDataProperties.swift */; };
@@ -31,6 +33,7 @@
 		A67723C12624BFDF00747EEF /* personCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67723C02624BFDF00747EEF /* personCollectionViewCell.swift */; };
 		A6A5CD1D2629D26300802A8A /* headerCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A5CD1C2629D26300802A8A /* headerCollectionReusableView.swift */; };
 		BE8225782623F3ED0023ADCA /* updateContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8225772623F3ED0023ADCA /* updateContactViewController.swift */; };
+		EF746DF366CD14F9E57856E9 /* Pods_NunnLabContacts_NunnLabContactsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBC82F6F6F025524468F027 /* Pods_NunnLabContacts_NunnLabContactsUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +54,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00D848AEA3DA3B8128E48FA2 /* Pods-NunnLabContacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NunnLabContacts.debug.xcconfig"; path = "Target Support Files/Pods-NunnLabContacts/Pods-NunnLabContacts.debug.xcconfig"; sourceTree = "<group>"; };
+		10271E3BF049F936203CADEB /* Pods_NunnLabContacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NunnLabContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E20A47B7E60D59B05364A19 /* Pods-NunnLabContacts-NunnLabContactsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NunnLabContacts-NunnLabContactsUITests.release.xcconfig"; path = "Target Support Files/Pods-NunnLabContacts-NunnLabContactsUITests/Pods-NunnLabContacts-NunnLabContactsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		347FCF94262B6DFD00BBD072 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		347FCF99262B706E00BBD072 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = "<group>"; };
 		347FCF9E262B707000BBD072 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		347FCFA4262B707100BBD072 /* NunnLabContacts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NunnLabContacts.xcdatamodel; sourceTree = "<group>"; };
+		50CAB05C9B3E2D75E1CD45D1 /* Pods-NunnLabContacts-NunnLabContactsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NunnLabContacts-NunnLabContactsUITests.debug.xcconfig"; path = "Target Support Files/Pods-NunnLabContacts-NunnLabContactsUITests/Pods-NunnLabContacts-NunnLabContactsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5C6BA877ADC8220A5646E5B0 /* Pods-NunnLabContactsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NunnLabContactsTests.debug.xcconfig"; path = "Target Support Files/Pods-NunnLabContactsTests/Pods-NunnLabContactsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A60EC037260D4B4200AD10DF /* NunnLabContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NunnLabContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60EC03A260D4B4200AD10DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A60EC03C260D4B4200AD10DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +87,10 @@
 		A67723C02624BFDF00747EEF /* personCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personCollectionViewCell.swift; sourceTree = "<group>"; };
 		A6A5CD1C2629D26300802A8A /* headerCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerCollectionReusableView.swift; sourceTree = "<group>"; };
 		BE8225772623F3ED0023ADCA /* updateContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updateContactViewController.swift; sourceTree = "<group>"; };
+		CDAAF4766BE20443826F9661 /* Pods-NunnLabContacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NunnLabContacts.release.xcconfig"; path = "Target Support Files/Pods-NunnLabContacts/Pods-NunnLabContacts.release.xcconfig"; sourceTree = "<group>"; };
+		FAF9DB32E20C69243C908C33 /* Pods_NunnLabContactsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NunnLabContactsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB537E92A741A59C056B5FCD /* Pods-NunnLabContactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NunnLabContactsTests.release.xcconfig"; path = "Target Support Files/Pods-NunnLabContactsTests/Pods-NunnLabContactsTests.release.xcconfig"; sourceTree = "<group>"; };
+		FBBC82F6F6F025524468F027 /* Pods_NunnLabContacts_NunnLabContactsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NunnLabContacts_NunnLabContactsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				173D2414305E3DE0293F60C6 /* Pods_NunnLabContacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				244E6B962DD18A5E6E865C74 /* Pods_NunnLabContactsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,12 +114,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF746DF366CD14F9E57856E9 /* Pods_NunnLabContacts_NunnLabContactsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		485100276A9A5803ADBEEC6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				00D848AEA3DA3B8128E48FA2 /* Pods-NunnLabContacts.debug.xcconfig */,
+				CDAAF4766BE20443826F9661 /* Pods-NunnLabContacts.release.xcconfig */,
+				50CAB05C9B3E2D75E1CD45D1 /* Pods-NunnLabContacts-NunnLabContactsUITests.debug.xcconfig */,
+				2E20A47B7E60D59B05364A19 /* Pods-NunnLabContacts-NunnLabContactsUITests.release.xcconfig */,
+				5C6BA877ADC8220A5646E5B0 /* Pods-NunnLabContactsTests.debug.xcconfig */,
+				FB537E92A741A59C056B5FCD /* Pods-NunnLabContactsTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8EC86DB57DC372974A8FC540 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10271E3BF049F936203CADEB /* Pods_NunnLabContacts.framework */,
+				FBBC82F6F6F025524468F027 /* Pods_NunnLabContacts_NunnLabContactsUITests.framework */,
+				FAF9DB32E20C69243C908C33 /* Pods_NunnLabContactsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A60EC02E260D4B4200AD10DF = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +152,8 @@
 				A60EC050260D4B4500AD10DF /* NunnLabContactsTests */,
 				A60EC05B260D4B4500AD10DF /* NunnLabContactsUITests */,
 				A60EC038260D4B4200AD10DF /* Products */,
+				485100276A9A5803ADBEEC6A /* Pods */,
+				8EC86DB57DC372974A8FC540 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,9 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A60EC061260D4B4500AD10DF /* Build configuration list for PBXNativeTarget "NunnLabContacts" */;
 			buildPhases = (
+				EDE7DEB4BDDCD7338D8ED0FC /* [CP] Check Pods Manifest.lock */,
 				A60EC033260D4B4200AD10DF /* Sources */,
 				A60EC034260D4B4200AD10DF /* Frameworks */,
 				A60EC035260D4B4200AD10DF /* Resources */,
+				48ADAA9C01B1B658928BA44F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,6 +239,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A60EC064260D4B4500AD10DF /* Build configuration list for PBXNativeTarget "NunnLabContactsTests" */;
 			buildPhases = (
+				83C3A4DC79A92788515CED5A /* [CP] Check Pods Manifest.lock */,
 				A60EC049260D4B4500AD10DF /* Sources */,
 				A60EC04A260D4B4500AD10DF /* Frameworks */,
 				A60EC04B260D4B4500AD10DF /* Resources */,
@@ -214,9 +258,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A60EC067260D4B4500AD10DF /* Build configuration list for PBXNativeTarget "NunnLabContactsUITests" */;
 			buildPhases = (
+				28A31516ECC2D38C89E9B540 /* [CP] Check Pods Manifest.lock */,
 				A60EC054260D4B4500AD10DF /* Sources */,
 				A60EC055260D4B4500AD10DF /* Frameworks */,
 				A60EC056260D4B4500AD10DF /* Resources */,
+				4EF961846A7746B23D450E42 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,6 +343,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28A31516ECC2D38C89E9B540 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NunnLabContacts-NunnLabContactsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48ADAA9C01B1B658928BA44F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NunnLabContacts/Pods-NunnLabContacts-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NunnLabContacts/Pods-NunnLabContacts-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NunnLabContacts/Pods-NunnLabContacts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EF961846A7746B23D450E42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NunnLabContacts-NunnLabContactsUITests/Pods-NunnLabContacts-NunnLabContactsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NunnLabContacts-NunnLabContactsUITests/Pods-NunnLabContacts-NunnLabContactsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NunnLabContacts-NunnLabContactsUITests/Pods-NunnLabContacts-NunnLabContactsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83C3A4DC79A92788515CED5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NunnLabContactsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDE7DEB4BDDCD7338D8ED0FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NunnLabContacts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A60EC033260D4B4200AD10DF /* Sources */ = {
@@ -493,6 +642,7 @@
 		};
 		A60EC062260D4B4500AD10DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00D848AEA3DA3B8128E48FA2 /* Pods-NunnLabContacts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -513,6 +663,7 @@
 		};
 		A60EC063260D4B4500AD10DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDAAF4766BE20443826F9661 /* Pods-NunnLabContacts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -533,6 +684,7 @@
 		};
 		A60EC065260D4B4500AD10DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C6BA877ADC8220A5646E5B0 /* Pods-NunnLabContactsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -554,6 +706,7 @@
 		};
 		A60EC066260D4B4500AD10DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB537E92A741A59C056B5FCD /* Pods-NunnLabContactsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -575,6 +728,7 @@
 		};
 		A60EC068260D4B4500AD10DF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50CAB05C9B3E2D75E1CD45D1 /* Pods-NunnLabContacts-NunnLabContactsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -594,6 +748,7 @@
 		};
 		A60EC069260D4B4500AD10DF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E20A47B7E60D59B05364A19 /* Pods-NunnLabContacts-NunnLabContactsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
