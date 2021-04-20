@@ -30,6 +30,7 @@ class updateContactViewController: UIViewController, UIImagePickerControllerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        usubmitButton.layer.cornerRadius = 10.0
         ucontactNames.text = unameStr
         ucontactSex.text = usexStr
         ucontactDOB.text = uDOBStr

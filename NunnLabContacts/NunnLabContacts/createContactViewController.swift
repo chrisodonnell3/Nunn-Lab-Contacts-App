@@ -31,6 +31,8 @@ class createContactViewController: UIViewController, UIImagePickerControllerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        submit.layer.cornerRadius = 10.0
+        
     }
     @IBAction func uploadPhoto(_ sender: Any) {
         let imagePickerControlller = UIImagePickerController()
