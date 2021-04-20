@@ -29,8 +29,9 @@ extension landingCollectionViewController: UISearchResultsUpdating {
     filteredList = []
     for item in self.contactsList{
         let aliases = item.names ?? []
+        let ids = item.id ?? ""
         for name in aliases {
-            if(name.lowercased().contains(input!.lowercased())) {
+            if(name.lowercased().contains(input!.lowercased()) || ids.lowercased().contains(input!.lowercased())) {
         //if that contact’s names array contains the query, add it to the filtered array
                 current.append(item.id ?? "")
                 self.filteredList.append(item)
