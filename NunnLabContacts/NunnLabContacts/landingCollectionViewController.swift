@@ -11,6 +11,7 @@ import CoreData
 let searchController = UISearchController(searchResultsController: nil)
 let tableData = ["One","Two","Three","Twenty-One"]
 var filteredTableData = [String]()
+var isAge : String?
 
 struct Person {
     public var birthdate: String?
@@ -55,22 +56,22 @@ extension landingCollectionViewController: UISearchResultsUpdating {
 
 class landingCollectionViewController: UICollectionViewController {
     
-//    var contactsList: [Contact] = PersistenceManager.shared.getContacts()
+    var contactsList: [Contact] = PersistenceManager.shared.getContacts()
     //Testing
     
-    var contactsList = [
-        Person(birthdate: "23-12-1999", sex: "Female", names: ["Ada","Adds"], location: "Durham", picture: nil, id: "1"),
-        Person(birthdate: "23-12-1999", sex: "Female", names: ["Dante","Inferno"], location: "Durham", picture: nil, id: "2"),
-        Person(birthdate: "23-12-1999", sex: "Female", names: ["Billy","Bo"], location: "Durham", picture: nil, id: "3")
-    ]
-//    var filteredList: [Contact] = PersistenceManager.shared.getContacts()
+//    var contactsList = [
+//        Person(birthdate: "23-12-1999", sex: "Female", names: ["Ada","Adds"], location: "Durham", picture: nil, id: "1"),
+//        Person(birthdate: "23-12-1999", sex: "Female", names: ["Dante","Inferno"], location: "Durham", picture: nil, id: "2"),
+//        Person(birthdate: "23-12-1999", sex: "Female", names: ["Billy","Bo"], location: "Durham", picture: nil, id: "3")
+//    ]
+    var filteredList: [Contact] = PersistenceManager.shared.getContacts()
     
-    var filteredList = [
-        Person(birthdate: "23-12-1999", sex: "Female", names: ["Ada","Adds"], location: "Durham", picture: nil, id: "1"),
-        Person(birthdate: "23-12-1999", sex: "Female", names: ["Dante","Inferno"], location: "Durham", picture: nil, id: "2"),
-        Person(birthdate: "23-12-1999", sex: "Female", names: ["Billy","Bo"], location: "Durham", picture: nil, id: "3")
-    ]
-    
+//    var filteredList = [
+//        Person(birthdate: "23-12-1999", sex: "Female", names: ["Ada","Adds"], location: "Durham", picture: nil, id: "1"),
+//        Person(birthdate: "23-12-1999", sex: "Female", names: ["Dante","Inferno"], location: "Durham", picture: nil, id: "2"),
+//        Person(birthdate: "23-12-1999", sex: "Female", names: ["Billy","Bo"], location: "Durham", picture: nil, id: "3")
+//    ]
+//
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -145,37 +146,26 @@ class landingCollectionViewController: UICollectionViewController {
             // Index the rest of contact's information
             destVC.contact_sex = "Sex: " + filteredList[index!.row].sex!
             destVC.picture = UIImage(data: cellPicture!)
-            destVC.contact_age = "Age: " + String(getAge(birthdate: filteredList[index!.row].birthdate!))
             destVC.contact_location = "Location: " + filteredList[index!.row].location!
             destVC.contact_id = "ID: " + filteredList[index!.row].id!
             
+//            // Age check because its nil
+//            if (filteredList[index!.row].birthdate == "") {
+//                destVC.contact_age = "Age: 0"
+//            } else {
+//                destVC.contact_age = "Age: " + String(getAge(birthdate: filteredList[index!.row].birthdate!))
+//            }
+            
+            
             // Preparing for next segue
-            // destVC.contact = contactsList[index!.row]
+            destVC.contact = contactsList[index!.row]
             destVC.cname = namesString
             destVC.cid = filteredList[index!.row].id!
             destVC.clocation = filteredList[index!.row].location!
             destVC.csex = filteredList[index!.row].sex!
             destVC.cage = filteredList[index!.row].birthdate!
             destVC.cphoto = cellPicture
-            
-        }
-        
-        if segue.identifier == "editProfileSegue" {
-            // Okay I need to send the contact info
-            
-            
-            let destVC = segue.destination as! updateContactViewController
-            let index = collectionView.indexPathsForSelectedItems?.first
-            
-            // Default picture in case of nil error
-            let defaultPicture = UIImage(named: "DefaultProfile")
-            let cellPicture = filteredList[index!.row].picture ?? defaultPicture?.pngData()
-
-            destVC.unameStr = filteredList[index!.row].names!.joined(separator: ", ")
-            destVC.usexStr = filteredList[index!.row].sex!
-            destVC.uimageData = cellPicture
-            destVC.uDOBStr = String(getAge(birthdate: filteredList[index!.row].birthdate!))
-            destVC.ulocationStr = filteredList[index!.row].location!
+            destVC.contact_age = "Age: " + String(getAge(birthdate: filteredList[index!.row].birthdate!))
             
         }
     }
@@ -222,6 +212,10 @@ class landingCollectionViewController: UICollectionViewController {
 
     func getAge(birthdate: String) -> Int{
             // Retrieves age of contact from specified birth date
+        
+            if (birthdate == "") {
+                return 0
+            }
             
             let dateFormatter = DateFormatter()
             dateFormatter.locale = Locale(identifier: "en_US_POSIX")
@@ -230,7 +224,8 @@ class landingCollectionViewController: UICollectionViewController {
             let baseDate = dateFormatter.date(from: "00-00-0000")
             
             let date = dateFormatter.date(from: birthdate)
-        let age = Calendar.current.dateComponents([.year], from: ((date ?? baseDate)!), to: Date()).year ?? 0
+            
+            let age = Calendar.current.dateComponents([.year], from: ((date ?? baseDate)!), to: Date()).year ?? 0
             return age
     }
     

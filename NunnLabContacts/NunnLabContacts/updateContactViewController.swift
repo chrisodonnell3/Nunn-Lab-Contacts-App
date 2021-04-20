@@ -39,6 +39,7 @@ class updateContactViewController: UIViewController, UIImagePickerControllerDele
     
     @IBAction func updateContact(_ sender: Any) {
         // Initializing values
+        // Me going to eat then try to do this
         unameStr = ucontactNames.text!.trimmingCharacters(in: .whitespaces)
         usexStr = ucontactSex.text
         ulocationStr = ucontactLocation.text
