@@ -19,10 +19,11 @@ class updateContactViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var ucontactDOB: UITextField!
     @IBOutlet weak var usubmitButton: UIButton!
     
-    var unameStr: String?
+    var unameStr: String = ""
+    var namesArray = [String]()
     var usexStr: String?
     var ulocationStr: String?
-    var uIDStr: String?
+    var uIDStr: String = ""
     var uDOBStr: String?
     var uimageData: Data?
     var ucontact: Contact?
@@ -38,50 +39,26 @@ class updateContactViewController: UIViewController, UIImagePickerControllerDele
     }
     
     @IBAction func updateContact(_ sender: Any) {
-        // Initializing values
-        // Me going to eat then try to do this
+     
+        // Declaring variables
+        uDOBStr = ucontactDOB.text
+        uIDStr = ucontactID.text!.trimmingCharacters(in: .whitespaces)
         unameStr = ucontactNames.text!.trimmingCharacters(in: .whitespaces)
         usexStr = ucontactSex.text
         ulocationStr = ucontactLocation.text
-        uIDStr = ucontactID.text
-        uDOBStr = ucontactDOB.text
-
-        // If values don't change, make it nil
-//        if (ucontact?.name == unameStr) {
-//            // we make value null
-//            unameStr = nil
-//        }
-//        if (ucontact?.sex == usexStr) {
-//            usexStr = nil
-//        }
-//        if (ucontact?.location == ulocationStr) {
-//            ulocationStr = nil
-//        }
-//        if (ucontact?.birthdate == uDOBStr) {
-//            uDOBStr = nil
-//        }
-//        if (ucontact?.picture == uimageData) {
-//            uimageData = nil
-//        } // We are going to skip the alias check lol
-//
-//        // Code continued
-//        if ualiasStr != nil && ualiasStr!.count != 0 {
-//            ualiasArray = ualiasStr!.components(separatedBy: ", ")
-//        }
-//        // Not too positive on how to do Alias check before breaking everything
-//        if (ucontact?.aliases == ualiasArray) {
-//            ualiasArray.removeAll()
-//        }
-//
-//
-//        if unameStr!.count != 0 {
-//            PersistenceManager.shared.updateContact(contact: ucontact!, name: unameStr, aliases: ualiasArray, birthdate: uDOBStr, sex: usexStr, location: ulocationStr, picture: uimageData)
-//            usubmitButton.setTitle("Updated!", for: .normal)
-//            ucontactNames.layer.borderWidth = 0
-//        } else {
-//            ucontactNames.layer.borderWidth = 1
-//            ucontactNames.layer.borderColor = UIColor.red.cgColor
-//        }
+        if unameStr.count != 0 {
+            namesArray = unameStr.components(separatedBy: ", ")
+        }
+        if unameStr.count != 0 && uIDStr.count != 0 {
+            PersistenceManager.shared.updateContact(contact: ucontact!, id: uIDStr, names: namesArray, birthdate: uDOBStr, sex: usexStr, location: ulocationStr, picture: uimageData)
+            usubmitButton.setTitle("Updated!", for: .normal)
+            ucontactNames.layer.borderWidth = 0
+        } else {
+            ucontactNames.layer.borderWidth = 1
+            ucontactNames.layer.borderColor = UIColor.red.cgColor
+            ucontactID.layer.borderWidth = 1
+            ucontactID.layer.borderColor = UIColor.red.cgColor
+        }
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

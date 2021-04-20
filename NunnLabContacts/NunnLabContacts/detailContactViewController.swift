@@ -33,10 +33,10 @@ class detailContactViewController: UIViewController {
     
     // Stuff to send to next segue
     var contact : Contact?
-    var cname: String?
+    var cname: String = ""
     var csex: String?
     var cage: String?
-    var cid: String?
+    var cid: String = ""
     var clocation: String?
     var cphoto: Data?
     
@@ -71,7 +71,7 @@ class detailContactViewController: UIViewController {
         if segue.identifier == "editProfileSegue" {
             // Okay I need to send the contact info
             let destVC = segue.destination as! updateContactViewController
-            // destVC.ucontact = contact
+            destVC.ucontact = contact
             destVC.uDOBStr = cage
             destVC.uIDStr = cid
             destVC.unameStr = cname
