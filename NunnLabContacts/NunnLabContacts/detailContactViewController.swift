@@ -16,20 +16,20 @@ class detailContactViewController: UIViewController {
     
     @IBOutlet weak var contactName: UILabel!
     
-    @IBOutlet weak var contactAliases: UILabel!
-    
     @IBOutlet weak var contactSex: UILabel!
     
     @IBOutlet weak var contactAge: UILabel!
     
     @IBOutlet weak var contactLocation: UILabel!
     
+    @IBOutlet weak var contactID: UILabel!
+    
     var contact_name: String?
     var contact_sex: String?
     var contact_age : String?
     var contact_location : String?
+    var contact_id : String?
     var picture: UIImage!
-    var contact_aliases : String?
     
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
@@ -45,7 +45,7 @@ class detailContactViewController: UIViewController {
         contactAge.text = contact_age
         contactLocation.text = contact_location
         contactPicture.image = picture
-        contactAliases.text = contact_aliases
+        contactID.text = contact_id
 
         // Do any additional setup after loading the view.
     }

@@ -146,9 +146,11 @@ class landingCollectionViewController: UICollectionViewController {
             destVC.picture = UIImage(data: cellPicture!)
             destVC.contact_age = "Age: " + String(getAge(birthdate: filteredList[index!.row].birthdate!))
             destVC.contact_location = "Location: " + filteredList[index!.row].location!
+            destVC.contact_id = "ID: " + filteredList[index!.row].id!
         }
         
         if segue.identifier == "editProfileSegue" {
+            // Okay I need to send the contact info
             
             
             let destVC = segue.destination as! updateContactViewController

@@ -106,13 +106,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		485100276A9A5803ADBEEC6A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		A60EC02E260D4B4200AD10DF = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +113,6 @@
 				A60EC050260D4B4500AD10DF /* NunnLabContactsTests */,
 				A60EC05B260D4B4500AD10DF /* NunnLabContactsUITests */,
 				A60EC038260D4B4200AD10DF /* Products */,
-				485100276A9A5803ADBEEC6A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
