@@ -411,7 +411,7 @@
                     <navigationItem key="navigationItem" id="Hhv-qF-NvX">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="69w-QY-OpV">
                             <connections>
-                                <segue destination="4iB-5d-zRd" kind="show" identifier="editProfileSegue" id="okl-ZA-31I"/>
+                                <segue destination="4iB-5d-zRd" kind="show" identifier="editProfileSegue" id="6fI-7T-Xrk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -454,10 +454,9 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="updateContact:" destination="4iB-5d-zRd" eventType="touchUpInside" id="YdA-uY-MDm"/>
-                                    <segue destination="kg9-NG-3uj" kind="show" id="hkm-hR-qdg"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Required" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bW2-PN-Jb9">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Optional" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bW2-PN-Jb9">
                                 <rect key="frame" x="180.5" y="66" width="179.5" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -523,7 +522,7 @@
                                     <action selector="updateContactImage:" destination="4iB-5d-zRd" eventType="touchUpInside" id="i9o-KG-xNL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alias (Separated by commas)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZp-Pg-Brf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZp-Pg-Brf">
                                 <rect key="frame" x="20" y="241" width="151.5" height="59"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -604,8 +603,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Edit Profile" id="aL8-Ln-8vd"/>
                     <connections>
-                        <outlet property="ucontactAlias" destination="CKF-yb-BH2" id="ITU-21-6vI"/>
                         <outlet property="ucontactDOB" destination="iWY-vH-Hkj" id="RaP-Xc-CI6"/>
+                        <outlet property="ucontactID" destination="CKF-yb-BH2" id="Tpc-mV-PFF"/>
                         <outlet property="ucontactLocation" destination="MjS-Dp-tuo" id="Kyk-dH-cDX"/>
                         <outlet property="ucontactNames" destination="bW2-PN-Jb9" id="WUB-c6-bj0"/>
                         <outlet property="ucontactSex" destination="VXo-Pp-u6g" id="Wcz-gP-wLy"/>
@@ -617,10 +616,6 @@
             <point key="canvasLocation" x="2447.826086956522" y="116.51785714285714"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="73R-Th-pI8"/>
-        <segue reference="hkm-hR-qdg"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Screen Shot 2021-04-18 at 6.31.06 PM" width="428" height="94"/>
         <image name="camera" width="274" height="274"/>

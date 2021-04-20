@@ -15,18 +15,17 @@ class updateContactViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var ucontactNames: UITextField!
     @IBOutlet weak var ucontactSex: UITextField!
     @IBOutlet weak var ucontactLocation: UITextField!
-    @IBOutlet weak var ucontactAlias: UITextField!
+    @IBOutlet weak var ucontactID: UITextField!
     @IBOutlet weak var ucontactDOB: UITextField!
     @IBOutlet weak var usubmitButton: UIButton!
     
-    var ualiasArray = [String]()
     var unameStr: String?
     var usexStr: String?
     var ulocationStr: String?
-    var ualiasStr: String?
+    var uIDStr: String?
     var uDOBStr: String?
     var uimageData: Data?
-    var ucontact: Contact? // this object needs to be passed from landing view controller
+    var ucontact: Contact?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +34,7 @@ class updateContactViewController: UIViewController, UIImagePickerControllerDele
         ucontactSex.text = usexStr
         ucontactDOB.text = uDOBStr
         ucontactLocation.text = ulocationStr
-        ucontactAlias.text = ualiasStr
+        ucontactID.text = uIDStr
     }
     
     @IBAction func updateContact(_ sender: Any) {
@@ -43,7 +42,7 @@ class updateContactViewController: UIViewController, UIImagePickerControllerDele
         unameStr = ucontactNames.text!.trimmingCharacters(in: .whitespaces)
         usexStr = ucontactSex.text
         ulocationStr = ucontactLocation.text
-        ualiasStr = ucontactAlias.text
+        uIDStr = ucontactID.text
         uDOBStr = ucontactDOB.text
 
         // If values don't change, make it nil

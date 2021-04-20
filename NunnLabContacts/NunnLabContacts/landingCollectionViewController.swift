@@ -147,6 +147,16 @@ class landingCollectionViewController: UICollectionViewController {
             destVC.contact_age = "Age: " + String(getAge(birthdate: filteredList[index!.row].birthdate!))
             destVC.contact_location = "Location: " + filteredList[index!.row].location!
             destVC.contact_id = "ID: " + filteredList[index!.row].id!
+            
+            // Preparing for next segue
+            // destVC.contact = contactsList[index!.row]
+            destVC.cname = namesString
+            destVC.cid = filteredList[index!.row].id!
+            destVC.clocation = filteredList[index!.row].location!
+            destVC.csex = filteredList[index!.row].sex!
+            destVC.cage = filteredList[index!.row].birthdate!
+            destVC.cphoto = cellPicture
+            
         }
         
         if segue.identifier == "editProfileSegue" {
@@ -160,11 +170,11 @@ class landingCollectionViewController: UICollectionViewController {
             let defaultPicture = UIImage(named: "DefaultProfile")
             let cellPicture = filteredList[index!.row].picture ?? defaultPicture?.pngData()
 
-            destVC.unameStr = "Names: " + filteredList[index!.row].names!.joined(separator: ", ")
-            destVC.usexStr = "Sex: " + filteredList[index!.row].sex!
+            destVC.unameStr = filteredList[index!.row].names!.joined(separator: ", ")
+            destVC.usexStr = filteredList[index!.row].sex!
             destVC.uimageData = cellPicture
-            destVC.uDOBStr = "Age: " + String(getAge(birthdate: filteredList[index!.row].birthdate!))
-            destVC.ulocationStr = "Location: " + filteredList[index!.row].location!
+            destVC.uDOBStr = String(getAge(birthdate: filteredList[index!.row].birthdate!))
+            destVC.ulocationStr = filteredList[index!.row].location!
             
         }
     }

@@ -31,6 +31,16 @@ class detailContactViewController: UIViewController {
     var contact_id : String?
     var picture: UIImage!
     
+    // Stuff to send to next segue
+    var contact : Contact?
+    var cname: String?
+    var csex: String?
+    var cage: String?
+    var cid: String?
+    var clocation: String?
+    var cphoto: Data?
+    
+    
     // Do any additional setup after loading the view.
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,17 +61,24 @@ class detailContactViewController: UIViewController {
     }
     
     
-    
-    
-}
-    
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//         Get the new view controller using segue.destination.
+//         Pass the selected object to the new view controller.
+        if segue.identifier == "editProfileSegue" {
+            // Okay I need to send the contact info
+            let destVC = segue.destination as! updateContactViewController
+            // destVC.ucontact = contact
+            destVC.uDOBStr = cage
+            destVC.uIDStr = cid
+            destVC.unameStr = cname
+            destVC.usexStr = csex
+            destVC.ulocationStr = clocation
+            destVC.uimageData = cphoto
+        }
     }
-    */
+}
+
