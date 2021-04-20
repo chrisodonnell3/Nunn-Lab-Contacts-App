@@ -1,6 +1,0 @@
-framework module Pods_NunnLabContactsTests {
-  umbrella header "Pods-NunnLabContactsTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

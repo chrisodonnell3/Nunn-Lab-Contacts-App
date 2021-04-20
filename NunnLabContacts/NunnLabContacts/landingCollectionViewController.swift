@@ -6,36 +6,72 @@
 //  Implemented Search by Ada Wong on 4/18/21.
 
 import UIKit
-import StringSearchKit
+import CoreData
 
 let searchController = UISearchController(searchResultsController: nil)
 let tableData = ["One","Two","Three","Twenty-One"]
 var filteredTableData = [String]()
 
+struct Person {
+    public var birthdate: String?
+    public var sex: String?
+    public var names: [String]?
+    public var location: String?
+    public var picture: Data?
+    public var id: String?
+}
+
 extension landingCollectionViewController: UISearchResultsUpdating {
   func updateSearchResults(for searchController: UISearchController) {
     //text of inputted search
     let input = searchController.searchBar.text
-    //list of all names
-    let names = StringDictionary(withStrings: ["Owen", "Owne", "Odog", "Oman", "Owenn", "Dylan", "Luke", "Gabriel", "Anthony", "Isaac", "Grayson", "Jack", "Julian", "Levi"],preserveCase: true)
-    //search names and returns empty if no results
-    let searchResults = names.strings(withPrefix: input ?? "")
-    //prints list of names after search
-    print(searchResults)
+    var current = [String]()
+    filteredList = []
+    for item in self.contactsList{
+        let aliases = item.names ?? []
+        for name in aliases {
+            if(name.lowercased().contains(input!.lowercased())) {
+        //if that contact’s names array contains the query, add it to the filtered array
+                current.append(item.id ?? "")
+                self.filteredList.append(item)
+                break
+            }
+        }
+    }
     
+    
+       
+    print(current)
+    
+    if(input!.isEmpty) {
+        self.filteredList = self.contactsList
+    }
+    
+    //return the filtered array
+    self.collectionView.reloadData()
   }
 }
 
 class landingCollectionViewController: UICollectionViewController {
     
-   
-    var contactsList: [Contact] = PersistenceManager.shared.getContacts()
+//    var contactsList: [Contact] = PersistenceManager.shared.getContacts()
+    //Testing
     
-
+    var contactsList = [
+        Person(birthdate: "23-12-1999", sex: "Female", names: ["Ada","Adds"], location: "Durham", picture: nil, id: "1"),
+        Person(birthdate: "23-12-1999", sex: "Female", names: ["Dante","Inferno"], location: "Durham", picture: nil, id: "2"),
+        Person(birthdate: "23-12-1999", sex: "Female", names: ["Billy","Bo"], location: "Durham", picture: nil, id: "3")
+    ]
+//    var filteredList: [Contact] = PersistenceManager.shared.getContacts()
+    
+    var filteredList = [
+        Person(birthdate: "23-12-1999", sex: "Female", names: ["Ada","Adds"], location: "Durham", picture: nil, id: "1"),
+        Person(birthdate: "23-12-1999", sex: "Female", names: ["Dante","Inferno"], location: "Durham", picture: nil, id: "2"),
+        Person(birthdate: "23-12-1999", sex: "Female", names: ["Billy","Bo"], location: "Durham", picture: nil, id: "3")
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        contactsList = PersistenceManager.shared.getContacts()
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -96,20 +132,20 @@ class landingCollectionViewController: UICollectionViewController {
             
             // Set default data in case of nil errors
             let defaultPicture = UIImage(named: "DefaultProfile")
-            let cellPicture = contactsList[index!.row].picture ?? defaultPicture?.pngData()
+            let cellPicture = filteredList[index!.row].picture ?? defaultPicture?.pngData()
             
             // Populate data for detail VC
            
-            let namesString = contactsList[index!.row].names!.joined(separator: ", ")
+            let namesString = filteredList[index!.row].names!.joined(separator: ", ")
            
             // Combine name with aliases' array and pipe into string
             destVC.contact_name = "Name(s): " + namesString
            
             // Index the rest of contact's information
-            destVC.contact_sex = "Sex: " + contactsList[index!.row].sex!
+            destVC.contact_sex = "Sex: " + filteredList[index!.row].sex!
             destVC.picture = UIImage(data: cellPicture!)
-            destVC.contact_age = "Age: " + String(getAge(birthdate: contactsList[index!.row].birthdate!))
-            destVC.contact_location = "Location: " + contactsList[index!.row].location!
+            destVC.contact_age = "Age: " + String(getAge(birthdate: filteredList[index!.row].birthdate!))
+            destVC.contact_location = "Location: " + filteredList[index!.row].location!
         }
         
         if segue.identifier == "editProfileSegue" {
@@ -120,13 +156,13 @@ class landingCollectionViewController: UICollectionViewController {
             
             // Default picture in case of nil error
             let defaultPicture = UIImage(named: "DefaultProfile")
-            let cellPicture = contactsList[index!.row].picture ?? defaultPicture?.pngData()
+            let cellPicture = filteredList[index!.row].picture ?? defaultPicture?.pngData()
 
-            destVC.unameStr = "Names: " + contactsList[index!.row].names!.joined(separator: ", ")
-            destVC.usexStr = "Sex: " + contactsList[index!.row].sex!
+            destVC.unameStr = "Names: " + filteredList[index!.row].names!.joined(separator: ", ")
+            destVC.usexStr = "Sex: " + filteredList[index!.row].sex!
             destVC.uimageData = cellPicture
-            destVC.uDOBStr = "Age: " + String(getAge(birthdate: contactsList[index!.row].birthdate!))
-            destVC.ulocationStr = "Location: " + contactsList[index!.row].location!
+            destVC.uDOBStr = "Age: " + String(getAge(birthdate: filteredList[index!.row].birthdate!))
+            destVC.ulocationStr = "Location: " + filteredList[index!.row].location!
             
         }
     }
@@ -144,7 +180,7 @@ class landingCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return contactsList.count
+        return filteredList.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -154,13 +190,13 @@ class landingCollectionViewController: UICollectionViewController {
         if let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? personCollectionViewCell {
     
             let defaultPicture = UIImage(named: "DefaultProfile")
-            let cellPicture = contactsList[indexPath.row].picture ?? defaultPicture?.pngData()
+            let cellPicture = filteredList[indexPath.row].picture ?? defaultPicture?.pngData()
             customCell.contactPhoto.image = UIImage(data: cellPicture!)
             
         
             // Retrive name and aliases for specific contact
             
-            let namesString = contactsList[indexPath.row].names!.joined(separator: ", ")
+            let namesString = filteredList[indexPath.row].names!.joined(separator: ", ")
             
             customCell.contactNames.text = namesString
              
@@ -181,7 +217,7 @@ class landingCollectionViewController: UICollectionViewController {
             let baseDate = dateFormatter.date(from: "00-00-0000")
             
             let date = dateFormatter.date(from: birthdate)
-            let age = Calendar.current.dateComponents([.year], from: (date ?? baseDate)!, to: Date()).year ?? 0
+        let age = Calendar.current.dateComponents([.year], from: ((date ?? baseDate)!), to: Date()).year ?? 0
             return age
     }
     
