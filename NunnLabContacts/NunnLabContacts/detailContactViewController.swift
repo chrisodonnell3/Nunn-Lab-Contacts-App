@@ -60,6 +60,21 @@ class detailContactViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        contactName.numberOfLines = 3
+        contactLocation.numberOfLines = 2
+        
+        // Initialize labels
+        contactName.text = contact_name
+        contactSex.text = contact_sex
+        contactAge.text = contact_age
+        contactLocation.text = contact_location
+        contactPicture.image = picture
+        contactID.text = contact_id
+    }
+    
     
 
     // MARK: - Navigation
@@ -80,5 +95,7 @@ class detailContactViewController: UIViewController {
             destVC.uimageData = cphoto
         }
     }
+    
+    
 }
 

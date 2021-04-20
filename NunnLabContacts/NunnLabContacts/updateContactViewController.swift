@@ -11,7 +11,6 @@ import UIKit
 class updateContactViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // Declaration of contents
-    // Was trying to do pre-populated text but that failed :( (Maybe I will continue tomorrow)
     @IBOutlet weak var ucontactNames: UITextField!
     @IBOutlet weak var ucontactSex: UITextField!
     @IBOutlet weak var ucontactLocation: UITextField!
@@ -92,15 +91,7 @@ class updateContactViewController: UIViewController, UIImagePickerControllerDele
 //
 //     Need function for updating
     
-
-    /*
-     MARK: - Navigation
-
-     In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         Get the new view controller using segue.destination.
-         Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
+    
 }

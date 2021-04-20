@@ -57,21 +57,9 @@ extension landingCollectionViewController: UISearchResultsUpdating {
 class landingCollectionViewController: UICollectionViewController {
     
     var contactsList: [Contact] = PersistenceManager.shared.getContacts()
-    //Testing
-    
-//    var contactsList = [
-//        Person(birthdate: "23-12-1999", sex: "Female", names: ["Ada","Adds"], location: "Durham", picture: nil, id: "1"),
-//        Person(birthdate: "23-12-1999", sex: "Female", names: ["Dante","Inferno"], location: "Durham", picture: nil, id: "2"),
-//        Person(birthdate: "23-12-1999", sex: "Female", names: ["Billy","Bo"], location: "Durham", picture: nil, id: "3")
-//    ]
+
     var filteredList: [Contact] = PersistenceManager.shared.getContacts()
     
-//    var filteredList = [
-//        Person(birthdate: "23-12-1999", sex: "Female", names: ["Ada","Adds"], location: "Durham", picture: nil, id: "1"),
-//        Person(birthdate: "23-12-1999", sex: "Female", names: ["Dante","Inferno"], location: "Durham", picture: nil, id: "2"),
-//        Person(birthdate: "23-12-1999", sex: "Female", names: ["Billy","Bo"], location: "Durham", picture: nil, id: "3")
-//    ]
-//
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -81,16 +69,16 @@ class landingCollectionViewController: UICollectionViewController {
         navigationItem.searchController = searchController
         definesPresentationContext = true
         
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        //Register cell classes
-        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        filteredList = PersistenceManager.shared.getContacts()
+
+        self.collectionView.reloadData()
+    }
+    
     // Function for the header/search bar in the Collection View
     override func collectionView(_ collectionView: UICollectionView,
                                  viewForSupplementaryElementOfKind kind: String,
@@ -156,9 +144,8 @@ class landingCollectionViewController: UICollectionViewController {
 //                destVC.contact_age = "Age: " + String(getAge(birthdate: filteredList[index!.row].birthdate!))
 //            }
             
-            
             // Preparing for next segue
-            destVC.contact = contactsList[index!.row]
+            destVC.contact = filteredList[index!.row]
             destVC.cname = namesString
             destVC.cid = filteredList[index!.row].id!
             destVC.clocation = filteredList[index!.row].location!
@@ -169,8 +156,6 @@ class landingCollectionViewController: UICollectionViewController {
             
         }
     }
-    
-    
     
 
     // MARK: UICollectionViewDataSource
