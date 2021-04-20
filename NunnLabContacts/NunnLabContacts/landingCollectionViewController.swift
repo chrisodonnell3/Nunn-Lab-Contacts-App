@@ -197,10 +197,10 @@ class landingCollectionViewController: UICollectionViewController {
             
         
             // Retrive name and aliases for specific contact
-            
             let namesString = filteredList[indexPath.row].names!.joined(separator: ", ")
             
             customCell.contactNames.text = namesString
+            customCell.contactID.text = filteredList[indexPath.row].id
              
             cell = customCell
         

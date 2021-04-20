@@ -13,6 +13,8 @@ class personCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var contactNames: UILabel!
     
+    @IBOutlet weak var contactID: UILabel!
+    
     // Aesthetic for cell
     override func layoutSubviews() {
         
