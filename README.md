@@ -2,13 +2,14 @@
 Group Members: Ada Wong, Chris O'Donnell, Evelyn Cupil-Garcia, Orgil Batzaya, Shawn Sun
 
 ## Description
-[Name] is a specialized data collection and management app that allows creating, editing, and searching individuals based on a number of unique fields, such as name (formal or aliases) or unique ID. All features are sustained offline, which permits functionality in remote or low-resource settings. This app was created in collaboration with the Nunn Lab at Duke University. 
+Nunn Lab Contacts is a specialized data collection and management app that allows creating, editing, and searching individuals based on a number of unique fields, such as name (formal or aliases) or unique ID. All features are sustained offline, which permits functionality in remote or low-resource settings. This app was created in collaboration with the Nunn Lab at Duke University. 
 
 ### Features
+Link to Figma Wireframes Design: https://www.figma.com/file/RdBl0TKcUVYHnia1HZSTMZ/storyboard-mvp?node-id=0%3A1
 
 **Table View:** Primary UI element of the app. Cells may contain a selection of the following: 
 - Photo
-- Primary Name
+- Names
 - ID
 - Sex/gender
 - Age
