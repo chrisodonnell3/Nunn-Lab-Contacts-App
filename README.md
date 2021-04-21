@@ -1,6 +1,9 @@
 # MK1 Nunn Lab Photo 
 Group Members: Ada Wong, Chris O'Donnell, Evelyn Cupil-Garcia, Orgil Batzaya, Shawn Sun
 
+## Presentation
+Presentation Link:
+
 ## Description
 Nunn Lab Contacts is a specialized data collection and management app that allows creating, editing, and searching individuals based on a number of unique fields, such as name (formal or aliases) or unique ID. All features are sustained offline, which permits functionality in remote or low-resource settings. This app was created in collaboration with the Nunn Lab at Duke University. 
 
