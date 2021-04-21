@@ -13,15 +13,6 @@ let tableData = ["One","Two","Three","Twenty-One"]
 var filteredTableData = [String]()
 var isAge : String?
 
-struct Person {
-    public var birthdate: String?
-    public var sex: String?
-    public var names: [String]?
-    public var location: String?
-    public var picture: Data?
-    public var id: String?
-}
-
 extension landingCollectionViewController: UISearchResultsUpdating {
   func updateSearchResults(for searchController: UISearchController) {
     //text of inputted search
@@ -68,6 +59,8 @@ class landingCollectionViewController: UICollectionViewController {
         searchController.searchBar.placeholder = "Search"
         navigationItem.searchController = searchController
         definesPresentationContext = true
+        navigationItem.hidesSearchBarWhenScrolling = false
+        
         
     }
 
@@ -209,6 +202,9 @@ class landingCollectionViewController: UICollectionViewController {
             let baseDate = dateFormatter.date(from: "00-00-0000")
             
             let date = dateFormatter.date(from: birthdate)
+        if(date == nil){
+            return 0
+        }
             
             let age = Calendar.current.dateComponents([.year], from: ((date ?? baseDate)!), to: Date()).year ?? 0
             return age

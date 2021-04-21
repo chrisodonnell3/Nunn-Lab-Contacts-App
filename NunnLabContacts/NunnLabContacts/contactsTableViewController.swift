@@ -107,7 +107,7 @@ class contactsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if (segue.identifier == "contactDetails") {
-            let destVC = segue.destination as! detailContactViewController
+            _ = segue.destination as! detailContactViewController
             // let selectRow = tableView.indexPathForSelectedRow?.row
             
             // populate items
@@ -116,6 +116,7 @@ class contactsTableViewController: UITableViewController {
 //            destVC.picture = zionImage
 //            destVC.contact_age = "Age: " + "20" // after plus will go data
 //            destVC.contact_location = "Location: " + "Duke" // after plus will go data
+            
             
         }
         
