@@ -21,9 +21,7 @@
 		A60EC047260D4B4500AD10DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A60EC045260D4B4500AD10DF /* LaunchScreen.storyboard */; };
 		A60EC052260D4B4500AD10DF /* NunnLabContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC051260D4B4500AD10DF /* NunnLabContactsTests.swift */; };
 		A60EC05D260D4B4500AD10DF /* NunnLabContactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC05C260D4B4500AD10DF /* NunnLabContactsUITests.swift */; };
-		A60EC06E260D585A00AD10DF /* contactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC06D260D585A00AD10DF /* contactsTableViewController.swift */; };
 		A60EC073260D590300AD10DF /* individualTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC072260D590300AD10DF /* individualTableViewCell.swift */; };
-		A60EC07D260D5E4700AD10DF /* mapContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC07C260D5E4700AD10DF /* mapContactViewController.swift */; };
 		A60EC085260D5F1200AD10DF /* createContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC084260D5F1200AD10DF /* createContactViewController.swift */; };
 		A60EC08A260D5FB100AD10DF /* detailContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60EC089260D5FB100AD10DF /* detailContactViewController.swift */; };
 		A66653322627950300FDF6D3 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A66653302627950200FDF6D3 /* Base.lproj */; };
@@ -69,9 +67,7 @@
 		A60EC058260D4B4500AD10DF /* NunnLabContactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NunnLabContactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60EC05C260D4B4500AD10DF /* NunnLabContactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NunnLabContactsUITests.swift; sourceTree = "<group>"; };
 		A60EC05E260D4B4500AD10DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A60EC06D260D585A00AD10DF /* contactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactsTableViewController.swift; sourceTree = "<group>"; };
 		A60EC072260D590300AD10DF /* individualTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = individualTableViewCell.swift; sourceTree = "<group>"; };
-		A60EC07C260D5E4700AD10DF /* mapContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapContactViewController.swift; sourceTree = "<group>"; };
 		A60EC084260D5F1200AD10DF /* createContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createContactViewController.swift; sourceTree = "<group>"; };
 		A60EC089260D5FB100AD10DF /* detailContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailContactViewController.swift; sourceTree = "<group>"; };
 		A66653302627950200FDF6D3 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
@@ -141,9 +137,7 @@
 				347FCF9E262B707000BBD072 /* Contact+CoreDataProperties.swift */,
 				347FCFA3262B707100BBD072 /* NunnLabContacts.xcdatamodeld */,
 				A66653302627950200FDF6D3 /* Base.lproj */,
-				A60EC07C260D5E4700AD10DF /* mapContactViewController.swift */,
 				A60EC072260D590300AD10DF /* individualTableViewCell.swift */,
-				A60EC06D260D585A00AD10DF /* contactsTableViewController.swift */,
 				BE8225772623F3ED0023ADCA /* updateContactViewController.swift */,
 				A60EC084260D5F1200AD10DF /* createContactViewController.swift */,
 				A60EC043260D4B4500AD10DF /* Assets.xcassets */,
@@ -311,11 +305,9 @@
 				A67723C12624BFDF00747EEF /* personCollectionViewCell.swift in Sources */,
 				A6A5CD1D2629D26300802A8A /* headerCollectionReusableView.swift in Sources */,
 				347FCF95262B6DFD00BBD072 /* PersistenceManager.swift in Sources */,
-				A60EC06E260D585A00AD10DF /* contactsTableViewController.swift in Sources */,
 				A60EC03D260D4B4200AD10DF /* SceneDelegate.swift in Sources */,
 				347FCF9A262B706E00BBD072 /* Contact+CoreDataClass.swift in Sources */,
 				A67723B42624B97300747EEF /* landingCollectionViewController.swift in Sources */,
-				A60EC07D260D5E4700AD10DF /* mapContactViewController.swift in Sources */,
 				A60EC08A260D5FB100AD10DF /* detailContactViewController.swift in Sources */,
 				BE8225782623F3ED0023ADCA /* updateContactViewController.swift in Sources */,
 				A60EC073260D590300AD10DF /* individualTableViewCell.swift in Sources */,

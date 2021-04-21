@@ -95,19 +95,23 @@ class updateContactViewController: UIViewController, UIImagePickerControllerDele
     
     
     func birthdateErrorCheck(birthdate: String) -> String{
-        let r = birthdate.index(birthdate.startIndex, offsetBy: 3)..<birthdate.index(birthdate.endIndex, offsetBy: -5)
         
-        let month = Int(birthdate[r])!
-        
-        if (month > 12){
-            let alert = UIAlertController(title: "Birthdate Input Error", message: "Please enter a valid birthdate of format dd-MM-yyyy", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            self.present(alert, animated: true)
-            readyToUpdate = false
-            } else{
-                readyToUpdate = true
-                return birthdate
+        if birthdate.count > 9{
+            let r = birthdate.index(birthdate.startIndex, offsetBy: 3)..<birthdate.index(birthdate.endIndex, offsetBy: -5)
+            
+            let month = Int(birthdate[r])!
+            
+            if (month > 12){
+                let alert = UIAlertController(title: "Birthdate Input Error", message: "Please enter a valid birthdate of format dd-MM-yyyy", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert, animated: true)
+                readyToUpdate = false
+                } else{
+                    readyToUpdate = true
+                    return birthdate
+            }
         }
+        
         return ""
     }
     

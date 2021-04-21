@@ -10,7 +10,6 @@ import UIKit
 
 class detailContactViewController: UIViewController {
     
-    // TODO: Evelyn's work
     // Connected elements
     @IBOutlet weak var contactPicture: UIImageView!
     
@@ -47,6 +46,7 @@ class detailContactViewController: UIViewController {
         
         // Set max lines to fit the labels' information
         contactName.numberOfLines = 3
+        contactID.numberOfLines = 2
         contactLocation.numberOfLines = 2
         
         // Initialize labels
@@ -57,13 +57,13 @@ class detailContactViewController: UIViewController {
         contactPicture.image = picture
         contactID.text = contact_id
 
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         contactName.numberOfLines = 3
+        contactID.numberOfLines = 2
         contactLocation.numberOfLines = 2
         
         // Initialize labels

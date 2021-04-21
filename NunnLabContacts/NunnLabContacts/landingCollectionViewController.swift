@@ -9,9 +9,6 @@ import UIKit
 import CoreData
 
 let searchController = UISearchController(searchResultsController: nil)
-let tableData = ["One","Two","Three","Twenty-One"]
-var filteredTableData = [String]()
-var isAge : String?
 
 extension landingCollectionViewController: UISearchResultsUpdating {
   func updateSearchResults(for searchController: UISearchController) {
@@ -32,10 +29,6 @@ extension landingCollectionViewController: UISearchResultsUpdating {
         }
     }
     
-    
-       
-    print(current)
-    
     if(input!.isEmpty) {
         self.filteredList = self.contactsList
     }
@@ -46,6 +39,7 @@ extension landingCollectionViewController: UISearchResultsUpdating {
 }
 
 class landingCollectionViewController: UICollectionViewController {
+    
     
     var contactsList: [Contact] = PersistenceManager.shared.getContacts()
 
@@ -168,13 +162,11 @@ class landingCollectionViewController: UICollectionViewController {
             let cellPicture = filteredList[indexPath.row].picture ?? defaultPicture?.pngData()
             customCell.contactPhoto.image = UIImage(data: cellPicture!)
             
-        
             // Retrive name and aliases for specific contact
             let namesString = filteredList[indexPath.row].names!.joined(separator: ", ")
             
             customCell.contactNames.text = namesString
             customCell.contactID.text = filteredList[indexPath.row].id
-             
             cell = customCell
         
         }
@@ -192,9 +184,7 @@ class landingCollectionViewController: UICollectionViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = "dd-MM-yyyy"
-        
         let baseDate = dateFormatter.date(from: "00-00-0000")
-        
         let date = dateFormatter.date(from: birthdate)
         if(date == nil){
             return 0
@@ -203,6 +193,7 @@ class landingCollectionViewController: UICollectionViewController {
         let age = Calendar.current.dateComponents([.year], from: ((date ?? baseDate)!), to: Date()).year ?? 0
         return age
     }
+    
     
     // MARK: UICollectionViewDelegate
 

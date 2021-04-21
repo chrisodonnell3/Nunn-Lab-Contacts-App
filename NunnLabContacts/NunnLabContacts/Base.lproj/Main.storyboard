@@ -263,7 +263,7 @@
                                             </constraints>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="light"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7PD-Uk-bUG">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7PD-Uk-bUG">
                                             <rect key="frame" x="8" y="155" width="181" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="181" id="VFD-NP-7LW"/>
@@ -273,6 +273,7 @@
                                                 <fragment content="ID">
                                                     <attributes>
                                                         <font key="NSFont" size="15" name="HelveticaNeue-BoldItalic"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -372,13 +373,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OH-st-FKR">
-                                <rect key="frame" x="20" y="614" width="91" height="28"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="bUh-qa-As9"/>
-                                    <constraint firstAttribute="width" constant="91" id="f6W-no-Jgf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OH-st-FKR">
+                                <rect key="frame" x="20" y="614" width="20.5" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
