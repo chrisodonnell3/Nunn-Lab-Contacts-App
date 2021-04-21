@@ -27,6 +27,8 @@ class updateContactViewController: UIViewController, UIImagePickerControllerDele
     var uimageData: Data?
     var ucontact: Contact?
     
+    var readyToUpdate: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         usubmitButton.layer.cornerRadius = 10.0
@@ -39,25 +41,30 @@ class updateContactViewController: UIViewController, UIImagePickerControllerDele
     
     @IBAction func updateContact(_ sender: Any) {
      
+        uDOBStr = birthdateErrorCheck(birthdate: ucontactDOB.text!)
+        
+        if readyToUpdate{
+            
+            uIDStr = ucontactID.text!.trimmingCharacters(in: .whitespaces)
+            unameStr = ucontactNames.text!.trimmingCharacters(in: .whitespaces)
+            usexStr = ucontactSex.text
+            ulocationStr = ucontactLocation.text
+            if unameStr.count != 0 {
+                namesArray = unameStr.components(separatedBy: ", ")
+            }
+            if unameStr.count != 0 && uIDStr.count != 0 {
+                PersistenceManager.shared.updateContact(contact: ucontact!, id: uIDStr, names: namesArray, birthdate: uDOBStr, sex: usexStr, location: ulocationStr, picture: uimageData)
+                usubmitButton.setTitle("Updated!", for: .normal)
+                ucontactNames.layer.borderWidth = 0
+            } else {
+                ucontactNames.layer.borderWidth = 1
+                ucontactNames.layer.borderColor = UIColor.red.cgColor
+                ucontactID.layer.borderWidth = 1
+                ucontactID.layer.borderColor = UIColor.red.cgColor
+            }
+        }
         // Declaring variables
-        uDOBStr = ucontactDOB.text
-        uIDStr = ucontactID.text!.trimmingCharacters(in: .whitespaces)
-        unameStr = ucontactNames.text!.trimmingCharacters(in: .whitespaces)
-        usexStr = ucontactSex.text
-        ulocationStr = ucontactLocation.text
-        if unameStr.count != 0 {
-            namesArray = unameStr.components(separatedBy: ", ")
-        }
-        if unameStr.count != 0 && uIDStr.count != 0 {
-            PersistenceManager.shared.updateContact(contact: ucontact!, id: uIDStr, names: namesArray, birthdate: uDOBStr, sex: usexStr, location: ulocationStr, picture: uimageData)
-            usubmitButton.setTitle("Updated!", for: .normal)
-            ucontactNames.layer.borderWidth = 0
-        } else {
-            ucontactNames.layer.borderWidth = 1
-            ucontactNames.layer.borderColor = UIColor.red.cgColor
-            ucontactID.layer.borderWidth = 1
-            ucontactID.layer.borderColor = UIColor.red.cgColor
-        }
+        
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -87,11 +94,22 @@ class updateContactViewController: UIViewController, UIImagePickerControllerDele
     }
     
     
-//     Need to prepopulate
-//
-//     Need function for updating
-    
-    
+    func birthdateErrorCheck(birthdate: String) -> String{
+        let r = birthdate.index(birthdate.startIndex, offsetBy: 3)..<birthdate.index(birthdate.endIndex, offsetBy: -5)
+        
+        let month = Int(birthdate[r])!
+        
+        if (month > 12){
+            let alert = UIAlertController(title: "Birthdate Input Error", message: "Please enter a valid birthdate of format dd-MM-yyyy", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            readyToUpdate = false
+            } else{
+                readyToUpdate = true
+                return birthdate
+        }
+        return ""
+    }
     
     
 }

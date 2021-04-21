@@ -130,13 +130,7 @@ class landingCollectionViewController: UICollectionViewController {
             destVC.contact_location = "Location: " + filteredList[index!.row].location!
             destVC.contact_id = "ID: " + filteredList[index!.row].id!
             
-//            // Age check because its nil
-//            if (filteredList[index!.row].birthdate == "") {
-//                destVC.contact_age = "Age: 0"
-//            } else {
-//                destVC.contact_age = "Age: " + String(getAge(birthdate: filteredList[index!.row].birthdate!))
-//            }
-            
+
             // Preparing for next segue
             destVC.contact = filteredList[index!.row]
             destVC.cname = namesString
@@ -189,25 +183,25 @@ class landingCollectionViewController: UICollectionViewController {
     }
 
     func getAge(birthdate: String) -> Int{
-            // Retrieves age of contact from specified birth date
+        // Retrieves age of contact from specified birth date
+    
+        if (birthdate == "") {
+            return 0
+        }
         
-            if (birthdate == "") {
-                return 0
-            }
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-            dateFormatter.dateFormat = "dd-MM-yyyy"
-            
-            let baseDate = dateFormatter.date(from: "00-00-0000")
-            
-            let date = dateFormatter.date(from: birthdate)
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        
+        let baseDate = dateFormatter.date(from: "00-00-0000")
+        
+        let date = dateFormatter.date(from: birthdate)
         if(date == nil){
             return 0
         }
-            
-            let age = Calendar.current.dateComponents([.year], from: ((date ?? baseDate)!), to: Date()).year ?? 0
-            return age
+        
+        let age = Calendar.current.dateComponents([.year], from: ((date ?? baseDate)!), to: Date()).year ?? 0
+        return age
     }
     
     // MARK: UICollectionViewDelegate

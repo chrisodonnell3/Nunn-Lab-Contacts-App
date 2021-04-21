@@ -13,7 +13,7 @@ import UIKit
 
 class createContactViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    
+
     @IBOutlet weak var id: UITextField!
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var sex: UITextField!
@@ -28,6 +28,8 @@ class createContactViewController: UIViewController, UIImagePickerControllerDele
     var locationStr: String?
     var birthdayStr: String?
     var imageData: Data?
+    
+    var readytoCreate: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,24 +61,49 @@ class createContactViewController: UIViewController, UIImagePickerControllerDele
     }
 
     @IBAction func createContact(_ sender: Any) {
-        idStr = id.text!.trimmingCharacters(in: .whitespaces)
-        namesStr = name.text!.trimmingCharacters(in: .whitespaces)
-        sexStr = sex.text
-        locationStr = location.text
-        birthdayStr = birthday.text
-        if namesStr.count != 0 {
-            namesArray = namesStr.components(separatedBy: ", ")
+        
+        birthdayStr = birthdateErrorCheck(birthdate: birthday.text!)
+        
+        
+        if readytoCreate{
+            idStr = id.text!.trimmingCharacters(in: .whitespaces)
+            namesStr = name.text!.trimmingCharacters(in: .whitespaces)
+            sexStr = sex.text
+            locationStr = location.text
+            
+            if namesStr.count != 0 {
+                namesArray = namesStr.components(separatedBy: ", ")
+            }
+            if namesStr.count != 0 && idStr.count != 0 {
+                PersistenceManager.shared.insertContact(id: idStr, names: namesArray, birthdate: birthdayStr, sex: sexStr, location: locationStr, picture: imageData)
+                submit.setTitle("Success!", for: .normal)
+                name.layer.borderWidth = 0
+            } else {
+                name.layer.borderWidth = 1
+                name.layer.borderColor = UIColor.red.cgColor
+                id.layer.borderWidth = 1
+                id.layer.borderColor = UIColor.red.cgColor
+            }
         }
-        if namesStr.count != 0 && idStr.count != 0 {
-            PersistenceManager.shared.insertContact(id: idStr, names: namesArray, birthdate: birthdayStr, sex: sexStr, location: locationStr, picture: imageData)
-            submit.setTitle("Success!", for: .normal)
-            name.layer.borderWidth = 0
-        } else {
-            name.layer.borderWidth = 1
-            name.layer.borderColor = UIColor.red.cgColor
-            id.layer.borderWidth = 1
-            id.layer.borderColor = UIColor.red.cgColor
+    }
+        
+    
+    
+    func birthdateErrorCheck(birthdate: String) -> String{
+        let r = birthdate.index(birthdate.startIndex, offsetBy: 3)..<birthdate.index(birthdate.endIndex, offsetBy: -5)
+        
+        let month = Int(birthdate[r])!
+        
+        if (month > 12){
+            let alert = UIAlertController(title: "Birthdate Input Error", message: "Please enter a valid birthdate of format dd-MM-yyyy", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            readytoCreate = false
+            } else{
+                readytoCreate = true
+                return birthdate
         }
+        return ""
     }
     /*s
     // MARK: - Navigation
