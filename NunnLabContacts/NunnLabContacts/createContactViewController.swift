@@ -21,6 +21,7 @@ class createContactViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var alias: UITextField!
     @IBOutlet weak var birthday: UITextField!
     @IBOutlet weak var submit: UIButton!
+    
     var idStr: String = ""
     var namesArray = [String]()
     var namesStr: String = ""

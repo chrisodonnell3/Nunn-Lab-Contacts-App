@@ -12,6 +12,9 @@ let searchController = UISearchController(searchResultsController: nil)
 
 extension landingCollectionViewController: UISearchResultsUpdating {
   func updateSearchResults(for searchController: UISearchController) {
+    
+    contactsList = PersistenceManager.shared.getContacts()
+    
     //text of inputted search
     let input = searchController.searchBar.text
     var current = [String]()
@@ -55,14 +58,11 @@ class landingCollectionViewController: UICollectionViewController {
         definesPresentationContext = true
         navigationItem.hidesSearchBarWhenScrolling = false
         
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
         filteredList = PersistenceManager.shared.getContacts()
-
         self.collectionView.reloadData()
     }
     
@@ -160,6 +160,7 @@ class landingCollectionViewController: UICollectionViewController {
     
             let defaultPicture = UIImage(named: "DefaultProfile")
             let cellPicture = filteredList[indexPath.row].picture ?? defaultPicture?.pngData()
+            
             customCell.contactPhoto.image = UIImage(data: cellPicture!)
             
             // Retrive name and aliases for specific contact

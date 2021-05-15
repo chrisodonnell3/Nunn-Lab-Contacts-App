@@ -18,12 +18,13 @@ class personCollectionViewCell: UICollectionViewCell {
     // Aesthetic for cell
     override func layoutSubviews() {
         
-        // Circular profile picture in cell
+        // Photo Display
         contactPhoto.layer.borderWidth = 1
         contactPhoto.layer.masksToBounds = false
         contactPhoto.layer.borderColor = UIColor.clear.cgColor
         //contactPhoto.layer.cornerRadius = contactPhoto.frame.height/2
         contactPhoto.clipsToBounds = true
+    
         
         // Modify the layout of the cell
         //self.layer.cornerRadius = 16.0
