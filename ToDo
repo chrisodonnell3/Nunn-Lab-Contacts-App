@@ -1,25 +1,12 @@
 ToDo: 
 
-- Create Profile: 
-	- Text is squished: 'Upload Photo' and 'Submit' 
-	- Photo Icon is squished
-
-- Edit Profile: 
-	- 'ID' does not appear
-	- 'Names' is cut off
-	- 'Location' is messed up
-	- 'Upload Photo' and 'Submit' are squished
-	- Photo icon is squished
-
-
 - Home: 
 	- Photos are displayed horizontally in cells
-	- After you create a contact and go back to home and search, the new contact disappears. It won't appear until you exit, close, and re-open the app. 
 
 
 - Additional features: 
 	- Possible login page 
-	
+
 
 
 

@@ -1,9 +1,6 @@
 //
 //  landingCollectionViewController.swift
 //  NunnLabContacts
-//
-//  Created by Chris O'Donnell on 4/12/21.
-//  Implemented Search by Ada Wong on 4/18/21.
 
 import UIKit
 import CoreData
@@ -45,7 +42,6 @@ class landingCollectionViewController: UICollectionViewController {
     
     
     var contactsList: [Contact] = PersistenceManager.shared.getContacts()
-
     var filteredList: [Contact] = PersistenceManager.shared.getContacts()
     
     override func viewDidLoad() {
@@ -57,7 +53,6 @@ class landingCollectionViewController: UICollectionViewController {
         navigationItem.searchController = searchController
         definesPresentationContext = true
         navigationItem.hidesSearchBarWhenScrolling = false
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -112,7 +107,6 @@ class landingCollectionViewController: UICollectionViewController {
             let cellPicture = filteredList[index!.row].picture ?? defaultPicture?.pngData()
             
             // Populate data for detail VC
-           
             let namesString = filteredList[index!.row].names!.joined(separator: ", ")
            
             // Combine name with aliases' array and pipe into string
@@ -124,7 +118,6 @@ class landingCollectionViewController: UICollectionViewController {
             destVC.contact_location = "Location: " + filteredList[index!.row].location!
             destVC.contact_id = "ID: " + filteredList[index!.row].id!
             
-
             // Preparing for next segue
             destVC.contact = filteredList[index!.row]
             destVC.cname = namesString
@@ -160,12 +153,10 @@ class landingCollectionViewController: UICollectionViewController {
     
             let defaultPicture = UIImage(named: "DefaultProfile")
             let cellPicture = filteredList[indexPath.row].picture ?? defaultPicture?.pngData()
-            
             customCell.contactPhoto.image = UIImage(data: cellPicture!)
             
             // Retrive name and aliases for specific contact
             let namesString = filteredList[indexPath.row].names!.joined(separator: ", ")
-            
             customCell.contactNames.text = namesString
             customCell.contactID.text = filteredList[indexPath.row].id
             cell = customCell
